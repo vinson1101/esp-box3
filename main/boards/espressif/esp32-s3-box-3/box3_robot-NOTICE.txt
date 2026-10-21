@@ -1,0 +1,11 @@
+BOX-3 robot artwork and motion reference
+
+Source: Espressif Systems, esp-box, examples/chatgpt_demo/main/ui
+Revision: aae1b7a6d193d968cf53e42f291a60c4ca1c622c
+License: Apache License 2.0. Full license retained at
+docs/references/esp-box3/sources/esp-box/LICENSE.
+
+The original RGB565/alpha image data is converted to LVGL 9 ARGB8888 by
+scripts/build_box3_robot_assets.py. The original waiting, listening and
+thinking motion timings are adapted to the existing BOX-3 LVGL 9 tileview.
+No OpenAI service, key, demo settings, font or cloud integration is imported.

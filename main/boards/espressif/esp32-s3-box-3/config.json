@@ -6,7 +6,27 @@
         {
             "name": "esp-box-3",
             "sdkconfig_append": [
-                "CONFIG_USE_DEVICE_AEC=y"
+                "CONFIG_USE_DEVICE_AEC=y",
+                "CONFIG_LV_USE_TILEVIEW=y",
+                "CONFIG_LV_FONT_MONTSERRAT_20=y",
+                "CONFIG_LOCAL_WAKE_ONLY=y",
+                "CONFIG_OTA_URL=\"\"",
+                "CONFIG_SR_VADN_WEBRTC=y",
+                "CONFIG_SR_VADN_VADNET1_MEDIUM=n"
+            ]
+        },
+        {
+            "name": "esp-box-3-ez",
+            "sdkconfig_append": [
+                "CONFIG_USE_DEVICE_AEC=y",
+                "CONFIG_LV_USE_TILEVIEW=y",
+                "CONFIG_LV_FONT_MONTSERRAT_20=y",
+                "CONFIG_EZ_DEVICE_GATEWAY=y",
+                "CONFIG_LOCAL_WAKE_ONLY=n",
+                "CONFIG_MBEDTLS_SSL_KEEP_PEER_CERTIFICATE=y",
+                "CONFIG_OTA_URL=\"\"",
+                "CONFIG_SR_VADN_WEBRTC=n",
+                "CONFIG_SR_VADN_VADNET1_MEDIUM=y"
             ]
         }
     ]

@@ -1,0 +1,1616 @@
+{
+  "date": "2026-10-21",
+  "project_head": "8d5d188a906aa046ca622f1d353f1f108d77eb3f",
+  "preferred_video_interval_seconds": [
+    53,
+    55
+  ],
+  "preferred_ui_source": "espressif/esp-box examples/chatgpt_demo; LVGL 8.3.4 / SquareLine Studio-generated UI",
+  "files": {
+    "sources/esp-box/examples/chatgpt_demo/main/CMakeLists.txt": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1642,
+      "sha256": "f14382cdc5aa32ab6aeea3bfb275d4d8ed187227c6580d73abc95a153d91a2ef"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/Kconfig.projbuild": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1471,
+      "sha256": "6c551cfeaa5cf9007bddfbe99516ca1d574ee492d2739fec5d9304a1cb2c1b8c"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_audio.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 10348,
+      "sha256": "b1f50fdea9c2f317e6df37307cab91bd2e930f677d193373dc8de9e144258002"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_audio.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 2418,
+      "sha256": "a7833b6b10d87d3319cea9e9ba693c362136ad339a12445c8057d28f0e7f78e8"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_sr.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 9345,
+      "sha256": "0873de4bd573bf9424f9933318bb68ec9a70fb5746ecc565fabd999f5eb56491"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_sr.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1640,
+      "sha256": "7d50e58e2320172128923846d4092e790c69dca424d2b9af09bc2e87026498a7"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_ui_ctrl.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 11100,
+      "sha256": "24217632c47aff48f19b2487cef3a21c7465efc1f1e73c2e99daeee5b9b0d619"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_ui_ctrl.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 882,
+      "sha256": "59fdee6b65bf7d2a6802c7bacd90572ff834d5d44bd1a1f4c39a0179f64365c2"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_ui_events.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1237,
+      "sha256": "b2727a40a3784ef0bd3539e5cc384bf012535cfa549d31b1d5451960fbedd5ed"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_wifi.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 10726,
+      "sha256": "f6832144a6237799e508797b759066802d5d102dc71394e37b99774ba90e2dee"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/app/app_wifi.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1255,
+      "sha256": "614e37df944151309db4177c5f9f76c1683268b498300c52132c1cc0ff75354f"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/idf_component.yml": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 184,
+      "sha256": "c84cca5c26b36bd45a37f9ceb05b5efd0231b8c1136b53002573776954b93bfe"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/main.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 8472,
+      "sha256": "110feae0a449fd1a742be80ca02d305f2148389a5200ab25a21a34342cb2da4a"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/main.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 996,
+      "sha256": "647b9f34d6a7766e8e4c080bbc17f34bbccae8568d910f7389e4cb810c9d8e14"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/settings/settings.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 2658,
+      "sha256": "d8535de8d44ef1e4456f583d7f5cc390c09531f5c4218967f4f83bc837b68628"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/settings/settings.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 664,
+      "sha256": "e59e3c76397c8835ff3244a272913c3642b3b6fd62fdeef1fc6ba723f0e55604"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/CMakeLists.txt": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1035,
+      "sha256": "4dc0eb814b64fcc537ee8335be404c7640e3959207ce54747b1dd5565f8e4c7b"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/filelist.txt": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 882,
+      "sha256": "f261718d21b0215144002734e4414bc1f4fe438636c8309843818cbc90052720"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/fonts/ui_font_KaiTiCN20.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 7778117,
+      "sha256": "1477d1975bcd89079c0bf59b30f3d06aaf6861770b5c580b1ffc91dee303e24c"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/fonts/ui_font_PingFangEN14.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 34789,
+      "sha256": "9ddc62dc86aaa68729ad62855be310c6b0da02489113fdfa6e3dfeaeaf65a3a2"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/fonts/ui_font_PingFangEN16.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 39767,
+      "sha256": "a6521f38da1c0d6cbbda551f0286ca54e373beb1473703bbdce19162f895bfd0"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/fonts/ui_font_PingFangEN20.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 53013,
+      "sha256": "d0889684ab5788fb4787de9b48d828aa754eafe721e2c32d113c84827d3cd050"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_body_eye_screen_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 31396,
+      "sha256": "c5918e08965a61e50149079e4f67f8220ee5641195dc2e4aaf9baae1309be7e1"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_body_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 214108,
+      "sha256": "65e632d04f688494761b1f6c32bd88a7965d8d6ce49827984459dfacb3fb0ecb"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_body_shadow_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 51101,
+      "sha256": "62fa06e2fc59fda695817d4ea9ad757306cabab25bbe1dc4204f4e92718ee3a3"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_listen_back_glow_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 271388,
+      "sha256": "6bf0275bbc941e9051e5356d059a44a33f81c85d2e9d15b8a96ad1ae286316e7"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_listen_body_eyes_1_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 5631,
+      "sha256": "f1c63ff5c886c8d30611d570c5d941d54fb7a1b9a847d8dd09d624443191aaf7"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_listen_body_eyes_2_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 2975,
+      "sha256": "5d9b319f07c7be4b53fa5e6bce24c73f7a0f8ff3c0d0071aa65e7d2116bc68de"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_reply_body_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 41386,
+      "sha256": "003efabd8f3ce1175bcac91893e4cb7913f1622162e7bb0dacce86be4affd87e"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_reply_chatgpt_bg_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 220667,
+      "sha256": "986f714d2ad0f5527031b525d7b18bd2a719c1def7d4db3341e98a24bccacce8"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_reply_chatgpt_logo_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 6986,
+      "sha256": "9ab1b7146088e1d7d7123a3af9f9ade74bfcf98f304f7e1e09aa5126e3d92131"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_reply_small_shadow_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 6926,
+      "sha256": "03cc6d454fc42b1de16114f8d0a1c62299276bbc570d598b48ce6b01db8f2d97"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_reset_icon_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 16056,
+      "sha256": "7c48ea61da4a4af35be147cd32d2c0a3183333ba27020a3e9c02fdd8eb82da86"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_settings_back_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 14201,
+      "sha256": "52c83366b9cafef13205c7ce31a6f4aa1370bbfe8cbb896cbeaf14da976d0bb6"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_settings_icon_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 35371,
+      "sha256": "4c9f16f695a6fd093d4c87cf5593bd32aa4dbc44f49cdeb762f14dd1cf4f0edb"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_setup_bg_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1158608,
+      "sha256": "534948f496dfa3e078e47215a2ce0aa208b010f04a4872ee67d495ac3537a34c"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_setup_text_bg_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1158633,
+      "sha256": "3ae92b6a86fbe318c27f6ea736a8c83ee537f1ea6fefbf710f21006882aad5ef"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_sleep_big_z_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4961,
+      "sha256": "a17e1d9246ae4750f17254a983f52454bab86f06985825d49b88932cf236cb2a"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_sleep_body_eyes_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 5916,
+      "sha256": "579858a8c137ab3e9208cd4e114153fd12f3da3673c581388fca87055cf52a42"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/images/ui_img_sleep_small_z_png.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 2981,
+      "sha256": "5a4d5dcc8ec364f1d74b819c435c3a37abb67d1f96f9da208c178dfc933b623f"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/screens/ui_ScreenListen.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 27887,
+      "sha256": "d8d8aa4a690a592f9bed3eef32b3f32bea7bc6f09b74bf79951f6a3d0dc27ea8"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/screens/ui_ScreenReset.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4782,
+      "sha256": "387ab93a162ac9e60d296d523a5fa5d9b9d7572425d3a88d9bd79b01c6f9f0d7"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/screens/ui_ScreenSettings.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 13273,
+      "sha256": "c895199352de2654081bfbad6a8636b78158c55350240bde62878dd3e87e343b"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/screens/ui_ScreenSetup.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 10422,
+      "sha256": "41bef66bedbd838a3a20d233e9330d8ce454e7d4d90adb7926ee097eaa1e5adb"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/screens/ui_ScreenWifiReset.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 5010,
+      "sha256": "11acc2f743d82d498884b09522b906ec6418f646f754d73c1b16318e71d6d4b5"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/ui.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 15961,
+      "sha256": "3bf5cb3ae3d66d29816b0ea71bfa4fa45e2bb56e8e0589ef8d121937272b35df"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/ui.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 5482,
+      "sha256": "28613b1168ca5d7a35b3a8d1a12e58660cd9f81309c577189dbb6d19e5d37913"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/ui_events.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 584,
+      "sha256": "6914b932cf9e3d3740785fc4cf7eb52e1b08b7db346d8f1b091e975be89b5fb1"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/ui_helpers.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 7121,
+      "sha256": "f5133cafac72356f0927261f43a04405d9fd6fc29aba020dfb2e236e164a0208"
+    },
+    "sources/esp-box/examples/chatgpt_demo/main/ui/ui_helpers.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 3578,
+      "sha256": "a4009c88f5424ec28203a9a1622714fd7621cb70abfa593de466cc8694132878"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_app.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 3366,
+      "sha256": "10980be30383f074f4e9ea73fcd14dba3a47d92496d0a69e95aba643d1d9d980"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_app_16.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 3140,
+      "sha256": "1654f73c8b86de30ca1e9e1fc427d26f2df81881f56e4e89b1b930dd60574399"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_cn_gb1_16.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 63000,
+      "sha256": "bbcdaa2b3e87d1f1015891e9e054730a7bdea85ab4052eea5af9d42b9912dff1"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_cn_gb1_28.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 8295857,
+      "sha256": "60c84e0ab36ba0da742295bc7e754c4882749da4061312eab340012f1b228f98"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_cn_gb2_16.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 53749,
+      "sha256": "a7fbed75ce1ed2347312085eefbbdf5293d9d88a85610df64676a22a145dbdf7"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_12.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 28126,
+      "sha256": "5e72b1565359cfce5ba426159dca142603b3d7aa0019677658445d3ff16aec67"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_14.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 35448,
+      "sha256": "ecab6e3f42ff05c67d646db014cc4de15a439026bf4da62dba004a88c53ddd4a"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_16.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 39843,
+      "sha256": "adfb3b8e3061e225b1b12815e034c888eaeb9c77e368032a6c54e5067d012002"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_22.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 63863,
+      "sha256": "1b346546644e785423dc37522fe3a3a0ed6c8b5f865ba14418822cdd8b20f51e"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_24.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 68856,
+      "sha256": "8909a7b3e2b95f92d0769823b9154236d061b709b424f1f784c4b44163d7b995"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_64.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 361111,
+      "sha256": "40fdc7cf9a6b33b80c3f2750d3dff90dd26fe1df7b5a87fb3049579648a564e7"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_bold_10.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 28331,
+      "sha256": "989a05b28dbf2f87495465ff01c63b4109c87c804cd1fdc944d89d7f787974e6"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_en_bold_36.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 137435,
+      "sha256": "5328399bb6a8d33c9cac6e880420fec1a081e39cef1df9659b55cde087d545f0"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_hint_16.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 69556,
+      "sha256": "d49ffc3d9745836fe25fa4bb580328d0481e07168585b5c9c969574557bdb0ef"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/font/font_icon_16.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 8750,
+      "sha256": "ed32645897530009376072d6d36d2fee41bff9fc2a88f09d276f538cd2aff7e2"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/esp_logo.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 665719,
+      "sha256": "047d48b59c04084cff65cda2977a49acc413c89bf13fe31991640eade2d7260e"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/esp_logo_tiny.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 42701,
+      "sha256": "3f472960fe8bbf3f96688022347891723adec3b58a8ddec006758e267b30dc31"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/esp_text.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 692695,
+      "sha256": "5c727bacca2e18f565590c4665fcd45dccf8cfef1a9100c205eaf9892071b731"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/hand_down.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 48864,
+      "sha256": "10565decde76a59293d9c36506c140e43cb68a0da176a7c00b3fcbfe715ce71f"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/hand_left.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 48793,
+      "sha256": "a54207064d387486cc9daef849cb78ff6922b431473ed5b2de83af13ac528120"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_about_us.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 417818,
+      "sha256": "0258cc923d364d8ecd85498d243c6adb26f2ab2e9022cc345f48af0d180731eb"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_air_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75140,
+      "sha256": "f0c5f65099b97530e9fc12815af1dfe105ed636e919d7af77247fc8eb85bef61"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_air_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75134,
+      "sha256": "976f21b91f07d2a698147603eefc360313974991a0e26e875c452fee270c2140"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_air_switch_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 35364,
+      "sha256": "4a3d50abb24c23b7d768ce90f2b9eaad915c186b65a68c98619ab9cd48d6cffd"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_air_switch_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 35358,
+      "sha256": "672d9d40dc026c3ce6a2bdffd85f6b13740919c20013583fc53d74dfa722b7f1"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_box.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 323156,
+      "sha256": "19a09a4b9c7eb321a8f082bd8107dc1e9646f994936a69f140956abd87b8356f"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_box_lite.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 323186,
+      "sha256": "ba1d7e51eb12733e7ad6002896b6dd63b10f17f8b11ded051252e8535dd48659"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_degree.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4680,
+      "sha256": "bb6c09485ead8d8dd07365ef66bf67500a2067e89c72538cf92af349c269cfa1"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_dev_ctrl.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 417818,
+      "sha256": "80cbc540ddd56c24a2c857a43937f31f11e9b212d2a7aaae19f2e89634c281d4"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_esp_sensor_base.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1147294,
+      "sha256": "5a41c1dbb1150b1c3b7901a79249c831e10319d92dd74310e0d8a7f17e3e5e6a"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_fan_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75140,
+      "sha256": "9c17025944f6a50e32f25f4534851ffdc02a317770eb931257a8dd33bacc1bdf"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_fan_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75134,
+      "sha256": "7799405b04afc24908759189516439efce83a113c567e40e055007988d86ef6b"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_help.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 417794,
+      "sha256": "4c0388928f49520503f0880e1bdd97abddf32bb3cd8977fee0fb88139022dbd8"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_humidity.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 9273,
+      "sha256": "32dfa9b90b24641d6db0fa3d5456496af88e8eb94a3b7c71dbcb8f59da002694"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_light_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75152,
+      "sha256": "d228353dc1ae60cef1fbb1f9af74cea29a977bca26b49e0f32e9796c2947f250"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_light_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75146,
+      "sha256": "dd00916e16b24f2b9af54eb383013c2784e4732e0e4d2da0c0c6c9d02afcf03f"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_media_player.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 417842,
+      "sha256": "d925fe6e6cc84aba9e7d4d91cbe44c0c190bc0140b9a0c328a97c64daaa71e06"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_network.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 417812,
+      "sha256": "b00b7d81c7f2dd1dc888e6488f29c420637bc2d8858b5369536e82e42ba9854b"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_percent.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4686,
+      "sha256": "95a1e99be3d94045642b733bfcba8b763bfeb6e73b9f2945c5530e3c00686f97"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_rader_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 16033,
+      "sha256": "129ec5e60fa94e7e38c6606723c895f93af1b8c938b7caa03eae25853d3f2e14"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_rader_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 16027,
+      "sha256": "982514d2b124293044a7782452de54d6a5d4c756e81a82137ae6ff1b045c436f"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_rmaker.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 462782,
+      "sha256": "6df4e21716e79abdb0cd9fb66f788aad2178355f238ae5bc0f78989aeac2450c"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_sensor_monitor.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 87716,
+      "sha256": "71349a50b711b5e1de065db46c7b933053de9860c080119226a473b0bad4d7ce"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_switch_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75158,
+      "sha256": "deef83c70523ec9277a2e4ab3915a4c3271bff2741f1696184a95dc13f3c118b"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_switch_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 75152,
+      "sha256": "567799b00a506c256a5be0a1b194d5700bd0aa61175878b73db2892619f283f4"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/icon_temp.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 9248,
+      "sha256": "ebbf1b407fcf5ee53b4070910324170e4f1451b8d2852dad9e786ff17a493103"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/img_music.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 500786,
+      "sha256": "887acff68f6f5d0434b9f0062ac4908be31bd7534bcef2050444557acf0071e4"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/media_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 46394,
+      "sha256": "8193c782862428f7dba5e23aeba02e9a6071ddaf2a5ec1dd7931038b608f4acc"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/media_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 46388,
+      "sha256": "b51dd8fcacac8eec822b013485d26ee80d2d19f1830364c455c49d8cd86b3ea8"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/mic_logo.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 108080,
+      "sha256": "1f72153d889712d0a043665c95ca49fe27f0f16ddaaf1fe63e00d758dfd255c1"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/mute_off.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 22892,
+      "sha256": "ef4bddc3587dcb60b95c3d3d80fe9c89247c7458e4eb648077ede381924c23a3"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/image/mute_on.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 32822,
+      "sha256": "9736fa89ca962a1cd404da4921f6e4d519f72be9f895eb4b9af4656879cd3b17"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/lv_symbol_extra_def.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 100259,
+      "sha256": "880f0662eb73588a8c8aa84546217318701343e4bd1ebfe6e69095b825dab056"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_about_us.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4570,
+      "sha256": "a0b29c7a78a63dfd7de065bc616a5b231af37ef873f6c09267c5a6b94d1e12e5"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_about_us.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 301,
+      "sha256": "5e9e69e15650ff6921bb744072c7ed1f5287626731415548d7db48a63a7b79f7"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_boot_animate.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 3036,
+      "sha256": "6e6dc066d4063c2132b7e51c1e751d62a837ef3912b1fde86a74bbb9c849c5f3"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_boot_animate.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 342,
+      "sha256": "4e784fe3cc12454cf95db59f972c78af6048218277b4ff92b181f47ab6ef0893"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_device_ctrl.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 7234,
+      "sha256": "ffb79cf06a866be7b014377d3a83fd21ab8248827540bf795d249e8dbc2de496"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_device_ctrl.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 466,
+      "sha256": "2bc366a5bbc451aa8e78e285e5a1ce7743a922d2d506b98aa5ff8877cdd95381"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_factory_mode.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_factory_mode.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 7160,
+      "sha256": "6a83e8005e20f50bf98e3e1d0560c226b0da80150138c00ebbd57c59ad8b383d"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_factory_mode.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 300,
+      "sha256": "228314f4826d8d27817c3a9f08bc9e4db048159083a07dce8f6cf0915ef1ea06"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_hint.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 13399,
+      "sha256": "5fb9f2ddb19835161da8f401ef7072cbac17f5a92112c059b609f98655df1df7"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_hint.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 297,
+      "sha256": "f5ee834af76e4766162b01b3d5f04887f1d4c8ad3b58ad04c733f29be7955c33"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_main.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_main.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 19656,
+      "sha256": "75f0731cace87cedb1271ff6aa8846c6d21ec5dc2cd0f7fedae38e9fa6904075"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_main.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 748,
+      "sha256": "f16b533e255babae65cc362939692096dafc8adcef144ae44fa1fbd226fac7fa"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_mute.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_mute.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 3313,
+      "sha256": "fb2918ff63875db75a90de333ee97fe6d0540e2f23178c4a6396bdc18efcadd5"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_mute.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 311,
+      "sha256": "637d1f1504f17154f8234968f96df9c0a152d35bcbff6836a824b0557636971d"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_net_config.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 12766,
+      "sha256": "34d3b94024a0799d394fdad100f2bb3d4afe4fb89dceff8c1f730e45ca2c83e5"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_net_config.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 792,
+      "sha256": "3b15fb98d4fda1fc8c7742f75c2a77372e75bbff6c7cb5f9a40d80650808aee3"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_player.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_player.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 13895,
+      "sha256": "fb5c3f1dcc71abaa733993d3c4ac0e36f39a33ade953093cb8e8cbf378b0850c"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_player.h": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_player.h",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 328,
+      "sha256": "388c98b0b3d691260f2e5ef1f30870b3d42e444d4a8666f10321805dbc64dec3"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_sensor_monitor.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_sensor_monitor.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 51915,
+      "sha256": "a256be269f2a4247db836578c878ce99d0cc185c1b1753cfd9080dc4e27dc220"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_sensor_monitor.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1796,
+      "sha256": "621e8a1cacd0572656c8bec2b99eb2312081827541d57a6ec3e2bf401a4ea03a"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_sr.c": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 7846,
+      "sha256": "034e225d52ad6bf5da5ef75f77fcd6059b4cc454fea5f653f5ace8531634cb88"
+    },
+    "sources/esp-box/examples/factory_demo/main/gui/ui_sr.h": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 474,
+      "sha256": "f11f868a57b6241ea09f74ae4b84f0fa7c6dffec6e881af88028e513dad264d2"
+    },
+    "sources/esp-box/docs/hardware_overview/esp32_s3_box_3/disassembly_tutorial_3.md": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4768,
+      "sha256": "8d588233b3ed2eff8bfea96bedee7d54432cd289f9ffe88d24514b919bc69b28"
+    },
+    "sources/esp-box/docs/hardware_overview/esp32_s3_box_3/hardware_overview_for_box_3.md": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 5512,
+      "sha256": "e1cbf33e81cd254b3f84d342ad6bab41bfea3ea5811c5874f4da088f58e3d965"
+    },
+    "sources/esp-box/docs/hardware_overview/esp32_s3_box_3/hardware_overview_for_box_3_cn.md": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 5157,
+      "sha256": "cee0264a74465fe51d6d3bdf725020528e872367c4fd50f544497060e1770194"
+    },
+    "sources/esp-box/LICENSE": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "sources/esp-box/README.md": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 12010,
+      "sha256": "89e0c9bc1b87bfc48bd23af925d7fd03e68de14fa7c6473343773794372379cf"
+    },
+    "sources/esp-box/README_cn.md": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 11954,
+      "sha256": "b61f58f3ab39cc8544554d0b28d8a865c287f11978cbf791f1de5e61435d246c"
+    },
+    "sources/esp-box/examples/chatgpt_demo/README.md": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/chatgpt_demo/README.md",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 5885,
+      "sha256": "552b0fb6e689cd942ede07c72fdbf3a9a5a62ae2e7e97ec8b256cc894cbef496"
+    },
+    "sources/esp-box/examples/factory_demo/README.md": {
+      "source": "https://github.com/espressif/esp-box",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 1123,
+      "sha256": "f53504f211f9eac52a19b139330d79dd35e8717989fe94aac2ac4013c27b6018"
+    },
+    "sources/esp-box/docs/getting_started_cn.md": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/docs/getting_started_cn.md",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 16242,
+      "sha256": "6f9b52f0dabc9ff40ef4a761b33b7f3ffefa848c623b863271157547cd2e781f"
+    },
+    "sources/esp-box/examples/factory_demo/main/app/app_sr_handler.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/app/app_sr_handler.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 9052,
+      "sha256": "705cb3f7276170c8b97f439b8614be5a080594f8b6d82be1b609591329f3a275"
+    },
+    "sources/xiaozhi-esp32/main/boards/espressif/esp32-s3-box-3/esp_box3_board.cc": {
+      "source": "https://raw.githubusercontent.com/78/xiaozhi-esp32/aab98abdb3866f16662d448efc656b67275f57e9/main/boards/espressif/esp32-s3-box-3/esp_box3_board.cc",
+      "revision": "aab98abdb3866f16662d448efc656b67275f57e9",
+      "bytes": 6078,
+      "sha256": "af3a68ffbf35807bf9288afabdaf4212a9d24f0f6084aaea85b303f4743ac17d"
+    },
+    "sources/xiaozhi-esp32/main/boards/espressif/esp32-s3-box-3/config.h": {
+      "source": "https://raw.githubusercontent.com/78/xiaozhi-esp32/aab98abdb3866f16662d448efc656b67275f57e9/main/boards/espressif/esp32-s3-box-3/config.h",
+      "revision": "aab98abdb3866f16662d448efc656b67275f57e9",
+      "bytes": 1143,
+      "sha256": "faa255bdcf3a34cee4ecb92bae78ddb713043df42f673ce637120eae362e70c6"
+    },
+    "sources/xiaozhi-esp32/main/audio/audio_codec.cc": {
+      "source": "https://raw.githubusercontent.com/78/xiaozhi-esp32/aab98abdb3866f16662d448efc656b67275f57e9/main/audio/audio_codec.cc",
+      "revision": "aab98abdb3866f16662d448efc656b67275f57e9",
+      "bytes": 1638,
+      "sha256": "2dafab53ce88f6aa66ff0cc51eb23da73dac8f034276636c3cf491e304443072"
+    },
+    "sources/xiaozhi-esp32/main/audio/codecs/box_audio_codec.cc": {
+      "source": "https://raw.githubusercontent.com/78/xiaozhi-esp32/aab98abdb3866f16662d448efc656b67275f57e9/main/audio/codecs/box_audio_codec.cc",
+      "revision": "aab98abdb3866f16662d448efc656b67275f57e9",
+      "bytes": 9110,
+      "sha256": "ae0a7b57e1f8ea065d288fbdcc3633d167e8e639366742d85105083dd9267e5c"
+    },
+    "sources/xiaozhi-esp32/main/mcp_server.cc": {
+      "source": "https://raw.githubusercontent.com/78/xiaozhi-esp32/aab98abdb3866f16662d448efc656b67275f57e9/main/mcp_server.cc",
+      "revision": "aab98abdb3866f16662d448efc656b67275f57e9",
+      "bytes": 26717,
+      "sha256": "c9694b0cc1a408ca0594f661c0810d06a5a77848f54d87bdd635d43fb99eabfc"
+    },
+    "sources/esp-box/components/bsp/src/boards/esp32_bsp_board.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/components/bsp/src/boards/esp32_bsp_board.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 7028,
+      "sha256": "deb79ab63facf9c76a601c7b9adb9bbbf5b91911e81c104e7b4deb0e428c3aaa"
+    },
+    "sources/esp-box/components/bsp/include/bsp_board.h": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/components/bsp/include/bsp_board.h",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 6999,
+      "sha256": "024d6b61165df9acf09f08b3bec32b75318a6436effd8ce9c68291f5bbe820d2"
+    },
+    "sources/esp-box/examples/factory_demo/main/app/app_sr.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/app/app_sr.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 22566,
+      "sha256": "1904e88b9d7de5f6c44213758d4654d2ff97e68d18a3187b52976184505b4d44"
+    },
+    "sources/esp-box/examples/factory_demo/main/main.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/main.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4557,
+      "sha256": "8051ee1258248ce52c4e96a607b39283db496775776c5f4fba8ed2bf53bf5ce1"
+    },
+    "sources/esp-box/examples/factory_demo/main/idf_component.yml": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/idf_component.yml",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 373,
+      "sha256": "60648738c5decac5fe613e21b8a497c37feef5693e7a0cfeb2df55eb7cd562bd"
+    },
+    "sources/esp-box/examples/factory_demo/main/settings.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/settings.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 2485,
+      "sha256": "03f282f1f6b8402da84795795af7077d3b7c810ff54331d512ee8342dd4e8759"
+    },
+    "sources/xiaozhi-esp32/main/application.cc": {
+      "source": "https://raw.githubusercontent.com/78/xiaozhi-esp32/aab98abdb3866f16662d448efc656b67275f57e9/main/application.cc",
+      "revision": "aab98abdb3866f16662d448efc656b67275f57e9",
+      "bytes": 55598,
+      "sha256": "4e752a5e719f613ed94e0fcfcbb8f71fc77193e213f6f92ef1926735fcb4d06a"
+    },
+    "sources/esp-box/examples/factory_demo/main/app/app_wifi.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/app/app_wifi.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 14545,
+      "sha256": "b68b2a8d45524efa3c7adfd0ce7c7552be98a1d1e8b4dcf0c94c76d23ebc81c5"
+    },
+    "sources/xiaozhi-esp32/docs/websocket.md": {
+      "source": "https://raw.githubusercontent.com/78/xiaozhi-esp32/aab98abdb3866f16662d448efc656b67275f57e9/docs/websocket.md",
+      "revision": "aab98abdb3866f16662d448efc656b67275f57e9",
+      "bytes": 18247,
+      "sha256": "9b82fe22280c814e36bc96c1325c5c6f5c0d8993e57c90f44479d1203d949147"
+    },
+    "sources/agent-robot/docs/通信协议.md": {
+      "source": "https://raw.githubusercontent.com/vinson1101/agent-robot/2f4a83396453217f57ce761817da9a8f36688bed/docs/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE.md",
+      "revision": "2f4a83396453217f57ce761817da9a8f36688bed",
+      "bytes": 29857,
+      "sha256": "4f02aeb2ea216d4f10e5ccd8135b9d6c034c6fe1192fe3d6ec444f33deacee38"
+    },
+    "sources/esp-box/components/bsp/src/boards/esp32_bsp_sensor.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/components/bsp/src/boards/esp32_bsp_sensor.c",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 8785,
+      "sha256": "72fd12fad1898a1bc2d4a6936b53794afed9bf4d9fbecb46ed43190be44b5fc0"
+    },
+    "sources/esp-box/components/bsp/idf_component.yml": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/components/bsp/idf_component.yml",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 342,
+      "sha256": "c885cda2ca6fa3ddb5c1fc4e7e1e8320dd303be300b95df5084a1cad676f2925"
+    },
+    "sources/esp-bsp/bsp/esp-box-3/esp-box-3.c": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-bsp/f259a6abd5808019b1903a422092a4234ca95a51/bsp/esp-box-3/esp-box-3.c",
+      "revision": "f259a6abd5808019b1903a422092a4234ca95a51",
+      "bytes": 26673,
+      "sha256": "f0bb67ba9f5e720964544c13aa78d94d153f8791c2f548ae16ab12a50064af23"
+    },
+    "sources/esp-bsp/bsp/esp-box-3/include/bsp/esp-box-3.h": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-bsp/f259a6abd5808019b1903a422092a4234ca95a51/bsp/esp-box-3/include/bsp/esp-box-3.h",
+      "revision": "f259a6abd5808019b1903a422092a4234ca95a51",
+      "bytes": 20061,
+      "sha256": "8e9bcc0932ab6ef53057a70521beeb4eacd073ea31c23494ec5a6cf056d65803"
+    },
+    "sources/esp-bsp/bsp/esp-box-3/idf_component.yml": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-bsp/f259a6abd5808019b1903a422092a4234ca95a51/bsp/esp-box-3/idf_component.yml",
+      "revision": "f259a6abd5808019b1903a422092a4234ca95a51",
+      "bytes": 1272,
+      "sha256": "efa1eeb9e393581491ee48f8fbce76bd8446e6f2ebc20a33a444580870ccd3d3"
+    },
+    "sources/esp-bsp/bsp/esp-box-3/Kconfig": {
+      "source": "https://raw.githubusercontent.com/espressif/esp-bsp/f259a6abd5808019b1903a422092a4234ca95a51/bsp/esp-box-3/Kconfig",
+      "revision": "f259a6abd5808019b1903a422092a4234ca95a51",
+      "bytes": 2603,
+      "sha256": "eed55b8947688276cf2c15ef6842bd0212eaba4469a11407455671dead599b23"
+    },
+    "official-docs/README_cn.md": {
+      "source": "User-provided official links; original source manifest retained",
+      "revision": null,
+      "bytes": 11954,
+      "sha256": "b61f58f3ab39cc8544554d0b28d8a865c287f11978cbf791f1de5e61435d246c"
+    },
+    "official-docs/getting_started_cn.md": {
+      "source": "User-provided official links; original source manifest retained",
+      "revision": null,
+      "bytes": 16242,
+      "sha256": "6f9b52f0dabc9ff40ef4a761b33b7f3ffefa848c623b863271157547cd2e781f"
+    },
+    "official-docs/manifest.json": {
+      "source": "User-provided official links; original source manifest retained",
+      "revision": null,
+      "bytes": 702,
+      "sha256": "21ccf7ab5dd27b8c752cbc8162cc4dfb5d84506e054aae3eb71f5ae4f3d65c5e"
+    },
+    "official-docs/esp32_s3_box_3.html": {
+      "source": "User-provided official links; original source manifest retained",
+      "revision": null,
+      "bytes": 25988,
+      "sha256": "35242db1bf975728d85d89bf333b60db3866cf644ce95c034ac2298c78bb9b18"
+    },
+    "sources/esp_emote_assets/emoji_large/Happy.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 81645,
+      "sha256": "2ed3a64ecdb7a78e2c9959bfc3758c2742d5447d4a2bcdc6d2bf072763deba5c"
+    },
+    "sources/esp_emote_assets/emoji_large/Sad.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 177137,
+      "sha256": "b9e0e2fb4e73e96edc331c3736f9d952de2507a711da34a5587c4426dcbca7e8"
+    },
+    "sources/esp_emote_assets/emoji_large/angry.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 98391,
+      "sha256": "63f6fa85175ad53f9c0c1fde0a5c19210257ec69f4cb45660d3db1fabdf9743a"
+    },
+    "sources/esp_emote_assets/emoji_large/battery_bg.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 3900,
+      "sha256": "829cf073613044ccf1aa11661760af7389f9dd3a329fc53164d3ca2436f05b9e"
+    },
+    "sources/esp_emote_assets/emoji_large/battery_charge.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 780,
+      "sha256": "8fa4ac1851daebd6e1c07d594b7fdb3217a33ae53fc1579c302fa04404ca3c15"
+    },
+    "sources/esp_emote_assets/emoji_large/confused.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 211666,
+      "sha256": "dafcdbe72939d7ef1061466caa30eb83517e953f284b53d9f6d708ac4319a05d"
+    },
+    "sources/esp_emote_assets/emoji_large/cry.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 89412,
+      "sha256": "d09e4eb5ca10ff7040af3ff0b6ce3ad06db0a5902935bf4b02d50b09dcf9e2c2"
+    },
+    "sources/esp_emote_assets/emoji_large/icon_WiFi_fail.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2082,
+      "sha256": "e04b7e2dd4bcbfe7889124e250c42d5ac6738e87e0762cfda20bd5c8620c8cb3"
+    },
+    "sources/esp_emote_assets/emoji_large/icon_mic.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2712,
+      "sha256": "c8e882d2c857393d9c9aad8a8cf4855b6c219a223b09f184b602bd94cbb29bcd"
+    },
+    "sources/esp_emote_assets/emoji_large/icon_speaker.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2712,
+      "sha256": "5af60ed2065f339e4fc97bc290bc29997851df23f0b2add3587f03507d9cd7c0"
+    },
+    "sources/esp_emote_assets/emoji_large/icon_tips.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2712,
+      "sha256": "4b6b42c18bee33f19a61a0832a5e46cabd9d4b27f62f99c4dafd230a793c3785"
+    },
+    "sources/esp_emote_assets/emoji_large/icon_wifi_ok.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2712,
+      "sha256": "a2b18b63922e7a2f8e1e58e0714e47a9afbdc2dea2702e3761ae4405fc2e50c1"
+    },
+    "sources/esp_emote_assets/emoji_large/listen.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 100609,
+      "sha256": "e7a000326797b73c87387e27dfdd5c2941ece32568080d1c6ef6947fd01c7f28"
+    },
+    "sources/esp_emote_assets/emoji_large/neutral.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 161063,
+      "sha256": "21280165824bbf806dc75d76f8ef0b0cdf73ce43c9ce9eda762f93a2da5dac87"
+    },
+    "sources/esp_emote_assets/emoji_large/shocked.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 64963,
+      "sha256": "bf97df5acdb7b64a34bb1f32ee2d5fd98a1117c6f06daad4a30e99ec44b47cf8"
+    },
+    "sources/esp_emote_assets/emoji_large/sleep.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 184689,
+      "sha256": "efa178f2d486c1143bff99f3304847fc73909e9ba60bcc52182fd818fe9ce680"
+    },
+    "sources/esp_emote_assets/emoji_large/winking.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 12698,
+      "sha256": "0969d76cd6dff1add4a140b4614025bf11703baa038b4b6190d0a22ea31eebd4"
+    },
+    "sources/esp_emote_assets/emoji_small/Happy.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 64816,
+      "sha256": "52bd8eaf7d3af2945425cc7904b44173b0452ddb658bd7c1d815c2f4bc550d7d"
+    },
+    "sources/esp_emote_assets/emoji_small/Sad.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 143624,
+      "sha256": "9ca0184403287ad3335f728f4bd62614d8b738e6814a62a03f4c47ad68f1887b"
+    },
+    "sources/esp_emote_assets/emoji_small/angry.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 78344,
+      "sha256": "008cf093539cece59147a924da69d56baad3ce6d29275903e199c003a96de81b"
+    },
+    "sources/esp_emote_assets/emoji_small/confused.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 147966,
+      "sha256": "589847b3b6e16293f6791975f8cb706675e45c1cc1120cea7be140fb8a2c69d5"
+    },
+    "sources/esp_emote_assets/emoji_small/cry.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 69814,
+      "sha256": "e0fef13aec22d0ca7927d4ea51d6cee44952775df869e0a910b403aaa001c5d4"
+    },
+    "sources/esp_emote_assets/emoji_small/icon_Battery.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 519,
+      "sha256": "85aa040ff584675a1ee7711d57efd602bb17c154e64038bca250ee128ec4008d"
+    },
+    "sources/esp_emote_assets/emoji_small/icon_WiFi_failed.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 402,
+      "sha256": "dea0fd7246b3ccbc82dd1bf11d0d297635e2b21eab4f7c845aea47f79bb242aa"
+    },
+    "sources/esp_emote_assets/emoji_small/icon_mic.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 519,
+      "sha256": "2bc77f1d7d8522f2fbab7f01ae1642bd0eddab4eaa580cd1e8f9e5a97a07453a"
+    },
+    "sources/esp_emote_assets/emoji_small/icon_speaker.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 519,
+      "sha256": "4b051b2f6eb4fcae761f30a2a32b162ba3033c2aad80b45cfbbcf8fe5407e321"
+    },
+    "sources/esp_emote_assets/emoji_small/icon_wifi.bin": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 519,
+      "sha256": "07afe3be4b31d629fb7b776aca86da5caefd25693179988b109273f6e310b6c2"
+    },
+    "sources/esp_emote_assets/emoji_small/listen.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 70090,
+      "sha256": "3d69a613f8b763b47e6a669c07268faf08068681299e4a03e4a96f262adef8a4"
+    },
+    "sources/esp_emote_assets/emoji_small/neutral.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 130538,
+      "sha256": "97a865867dcbe10e3cffc86f8c4c77a2db3df8f0418e3444ad36e274ae99d628"
+    },
+    "sources/esp_emote_assets/emoji_small/shocked.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 52244,
+      "sha256": "d705cbc4789417bb26578206c8cfb5e83cc450c80c291c9f9c27afe10591af5f"
+    },
+    "sources/esp_emote_assets/emoji_small/sleep.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 160920,
+      "sha256": "c062243e6c1e6cd7e6d9ca8a6a75a24125be19bf94c8eb83f5f8ee51f0b0925e"
+    },
+    "sources/esp_emote_assets/emoji_small/winking.eaf": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 10496,
+      "sha256": "276b7589348b66f8eb573e57f27f10e3873de670416d39bc3070aa1b35146aba"
+    },
+    "sources/esp_emote_assets/320_240/config.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 122,
+      "sha256": "12a7303647b5e2654856be935e38676421d2a918e08a6595f02ba9df45959856"
+    },
+    "sources/esp_emote_assets/320_240/emote.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 1603,
+      "sha256": "96cab1be35fbcd7b1f2bd0e5872b8cb4fd9a9cd6e60ef49a6a66df17ff3e7dfb"
+    },
+    "sources/esp_emote_assets/320_240/layout.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2011,
+      "sha256": "f2e333651d87c1f9fa54e5c96a8593360ad2f77d4ba13b125a1db28b89cc0f48"
+    },
+    "sources/esp_emote_assets/360_360/config.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 122,
+      "sha256": "12a7303647b5e2654856be935e38676421d2a918e08a6595f02ba9df45959856"
+    },
+    "sources/esp_emote_assets/360_360/emote.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 1603,
+      "sha256": "96cab1be35fbcd7b1f2bd0e5872b8cb4fd9a9cd6e60ef49a6a66df17ff3e7dfb"
+    },
+    "sources/esp_emote_assets/360_360/layout.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2010,
+      "sha256": "e7e07d6c6fcbad6d082649fa21966e1ad83a625feecbceca56a3abaabd64d3e0"
+    },
+    "sources/esp_emote_assets/1024_600/config.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 122,
+      "sha256": "12a7303647b5e2654856be935e38676421d2a918e08a6595f02ba9df45959856"
+    },
+    "sources/esp_emote_assets/1024_600/emote.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 1603,
+      "sha256": "96cab1be35fbcd7b1f2bd0e5872b8cb4fd9a9cd6e60ef49a6a66df17ff3e7dfb"
+    },
+    "sources/esp_emote_assets/1024_600/layout.json": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 2013,
+      "sha256": "313d38b001715a75fa535dcd610dedb84cbca88a3db2d8743ef0aab89adf9150"
+    },
+    "sources/esp_emote_assets/README.md": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 4528,
+      "sha256": "b92a7a8d7dd4d3f02174041c71ba5be6ee1dc5c5527919ed0c1ef26ff90bab11"
+    },
+    "sources/esp_emote_assets/CHANGELOG.md": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 924,
+      "sha256": "d6b3415f384f4390c65bffba39a50c9e1d0110b29365a186bddad7a70ef31ee6"
+    },
+    "sources/esp_emote_assets/idf_component.yml": {
+      "source": "https://github.com/espressif2022/esp_emote_assets",
+      "revision": "29aa5259ac22651b8636683698c021482050b206",
+      "bytes": 539,
+      "sha256": "29d4df89e7b93c48b187c345fa346e25b4bd89b46bedf3d8c0aff698b2a5e12b"
+    },
+    "sources/esp_emote_gfx/src/lib/eaf/gfx_eaf_dec.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 30015,
+      "sha256": "0ddf5f4b89957791d4f94f37ae7f34a01f54794f1a4266f9634b9926599c3f23"
+    },
+    "sources/esp_emote_gfx/src/lib/eaf/gfx_eaf_dec.h": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 10711,
+      "sha256": "5cd75760deb0b36ec764f2ecf6254addfcef13e8930ce314c446c5f93ebbd9e4"
+    },
+    "sources/esp_emote_expression/src/default_assets/font_maison_neue_book_12.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 39191,
+      "sha256": "ba23c5b64d042a45ac1c754e4ba65141894141cc130f94456da1663175bfb028"
+    },
+    "sources/esp_emote_expression/src/default_assets/font_maison_neue_book_26.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 81706,
+      "sha256": "b06f0846adfeb00fcaa248650485210b928c78e7f24c560f978d53fdd7acc9ee"
+    },
+    "sources/esp_emote_expression/src/default_assets/font_puhui_basic_20_4.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 699490,
+      "sha256": "df72711cefa4ec464cfda864bbcf20db5a118f90e350c2fc4314cc7bc8049c5d"
+    },
+    "sources/esp_emote_expression/src/emote_init.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 5873,
+      "sha256": "bb7fcac3ab3219e199aa5eb4305beaf26a2195ff017e4d62bcc70b2143b51cde"
+    },
+    "sources/esp_emote_expression/src/emote_load.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 22396,
+      "sha256": "d6b1fb1ca29d0cc53a72678eaa75e6f71b34367245d2397aec0509528dec6637"
+    },
+    "sources/esp_emote_expression/src/emote_op.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 24243,
+      "sha256": "9e53454f7f05f657fe6fe84535d3eafd8a7684282f08b4cf8ee71eea915fcfe4"
+    },
+    "sources/esp_emote_expression/src/emote_setup.c": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 27739,
+      "sha256": "fdfdd316dd8d9ad474836c60f99171413a1a6bb47e0ccecf6d574ec34b881936"
+    },
+    "sources/esp_emote_expression/include/expression_emote/emote_api.h": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 6172,
+      "sha256": "69e54332f121b700214c58bdc1abb3c5cb1de7102c46985a206f9056215359d1"
+    },
+    "sources/esp_emote_expression/include/expression_emote/emote_assets.h": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 2741,
+      "sha256": "df90fa245a61ac876946be0a51470f69808c991d7efed0a39b6b8bce797cdad6"
+    },
+    "sources/esp_emote_expression/include/expression_emote/emote_init.h": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 2246,
+      "sha256": "fb03ea982d1a7167942d5c6bb1d9b1be205d160068ce2e831f1aecd13990ac64"
+    },
+    "sources/esp_emote_expression/include/expression_emote.h": {
+      "source": "Installed official component; version in archived idf_component.yml",
+      "revision": null,
+      "bytes": 255,
+      "sha256": "b9def5eeb75a466a126ebef616c85dd72549d880f9bc6c858cba0dcdfc12a157"
+    },
+    "sources/esp_emote_gfx/README.md": {
+      "source": "Installed official component; metadata retained",
+      "revision": null,
+      "bytes": 3905,
+      "sha256": "b4b951a512390539c90f68fd85f69cc4e8e5547539e82c7ca4f10b819db6cdd1"
+    },
+    "sources/esp_emote_gfx/LICENSE": {
+      "source": "Installed official component; metadata retained",
+      "revision": null,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "sources/esp_emote_gfx/idf_component.yml": {
+      "source": "Installed official component; metadata retained",
+      "revision": null,
+      "bytes": 773,
+      "sha256": "084122e93c8ee399a3d28258fd4b13e2da763ec56ae26cb1f7b0c07a06068e0e"
+    },
+    "sources/esp_emote_expression/README.md": {
+      "source": "Installed official component; metadata retained",
+      "revision": null,
+      "bytes": 11754,
+      "sha256": "c22b003ad668f93903e17e2a05189e4629d03221832c755ca1be5d462e8cce56"
+    },
+    "sources/esp_emote_expression/idf_component.yml": {
+      "source": "Installed official component; metadata retained",
+      "revision": null,
+      "bytes": 842,
+      "sha256": "47874b2fba79101b4706c906f828eeb30889d4d93084bd9ff16faacc39f65732"
+    },
+    "previews/emote/Happy.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2365,
+      "sha256": "52d9b487788072b8ac7364d28c5704963047039c286fea2dded4afb11db28069"
+    },
+    "previews/emote/angry.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 78844,
+      "sha256": "bc8a843adbae3d57391da1a5ce2b11c1fa424331200c4b99c135374ca8902f1e"
+    },
+    "previews/emote/neutral.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2175,
+      "sha256": "62ef6fbb60447d2e12e2e2d732595f4dacea8530114492d6e43d09d0258b9662"
+    },
+    "previews/emote/index.html": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 3319,
+      "sha256": "07bd758362fb68ac4b2e51188e2a75b7096cb83f52528cd102d809234a34ad06",
+      "adaptation": "Project-relative resource paths; original upstream source assets unchanged"
+    },
+    "previews/emote/listen.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 55782,
+      "sha256": "aaf1c5782f2dab616d5107bab6513017fd79d70edf1bb335c6ddea558f7b7862"
+    },
+    "previews/emote/Sad.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2048,
+      "sha256": "6134fbb9628e85c2e95145c149523d477a7d367adc1ba2ed68f3e8bd3c92945d"
+    },
+    "previews/emote/cry.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2188,
+      "sha256": "1d3c5122729e22ee584ee11181c3eb395e4c6bfacef8033acaaad9b50a9062db"
+    },
+    "previews/emote/sleep.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2180,
+      "sha256": "27f38d5ce3fa4cc580fe80d864c915317d6e2d095d78c943fb09f72a63c1de01"
+    },
+    "previews/emote/shocked.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 52160,
+      "sha256": "a1341208dbeef1d51dd66c9c517af0a1d47344a94e48bdb7b0144faf7fb9fac4"
+    },
+    "previews/emote/winking.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2341,
+      "sha256": "6421ecb5561cf27543160d9ed57805d05b9ada2ba576760a120990177949f0f2"
+    },
+    "previews/emote/confused.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2220,
+      "sha256": "5e7a1ff43ae6d10439fd2d9fff236fe3627be83b0488066d08fe575647abe73a"
+    },
+    "previews/emote/Happy.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 64179,
+      "sha256": "64c34f3d86c8c811a8c3e4267bd3d75db9258ad075109b7fac2c94b71335133c"
+    },
+    "previews/emote/angry.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2196,
+      "sha256": "211dda1a9f7914ef5efd527f7bc8e0ae438d5dfb4ac487cb43fc0b1977fe0225"
+    },
+    "previews/emote/neutral.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 123371,
+      "sha256": "67ea95e97b2887730c233bdb21ca0716d141e237962bc2fcf772aaa6d183a79f"
+    },
+    "previews/emote/listen.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 953,
+      "sha256": "88d86fd028667684e956a144d36ecbcafa55dbb0465f2ab784d5c658219a4414"
+    },
+    "previews/emote/Sad.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 128382,
+      "sha256": "da1bdf83747b6fcd430fe328ac63d57c8637fd8f5752caad0886602535f8c755"
+    },
+    "previews/emote/cry.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 73061,
+      "sha256": "ab8601d7b35fa3f1e68ca78e428eda710e988d06ea22f5d93674b21ca532534b"
+    },
+    "previews/emote/sleep.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 129130,
+      "sha256": "c210b91089c4ffae4cf45722232de6f0b03a8baf231957ee5633198d5fababc9"
+    },
+    "previews/emote/shocked.png": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 2116,
+      "sha256": "588580152941c602d6f169355d17b59fc5754c99e156eaf4374cb968f118c38e"
+    },
+    "previews/emote/winking.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 20963,
+      "sha256": "75c1474e9e4488a56a8edd8686d0bfc704891b4c90bb48b865cf2919ddaa477e"
+    },
+    "previews/emote/confused.gif": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 183882,
+      "sha256": "63c11f1f76d990bb9c3683da174eb24b412f08383d641c6fd44b6c89600a3108"
+    },
+    "previews/emote/extract_preview.py": {
+      "source": "Derived preview of original Emote EAF; not device footage",
+      "revision": null,
+      "bytes": 6204,
+      "sha256": "ab54e2cc9a57453c5f593a7d941cf111c7d80a0ec2134d27f16acafb51571743",
+      "adaptation": "Project-relative resource paths; original upstream source assets unchanged"
+    },
+    "previews/factory/boot_animation.png": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 28726,
+      "sha256": "1a39ad7400e6861479c9e0dacdcb83ed1b0419bf22ccba38ed13eb0b41f12341"
+    },
+    "previews/factory/5.1.png": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 13275,
+      "sha256": "bba7c63999c65dfbacb417693b79f3097ca266fdb66e77e6f96f4e2b57aef348"
+    },
+    "previews/factory/official-video-attribution.json": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": null,
+      "bytes": 409,
+      "sha256": "1999cfd28471c85bf86de6eb1fa9fc73053ec3cceff57857643e138a9171ec2d"
+    },
+    "previews/factory/review.jpg": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": null,
+      "bytes": 74701,
+      "sha256": "03724256b0eb64d5e70844cd5adb3b2b41ff452199da91df88b4cee9c2343804"
+    },
+    "previews/factory/16.png": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 4947,
+      "sha256": "8aa63c33a4f739d91c3b386dbfb3f3c2ec387af53c256ad535f5020f5e27b24e"
+    },
+    "previews/factory/ui_sr.c": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 7846,
+      "sha256": "034e225d52ad6bf5da5ef75f77fcd6059b4cc454fea5f653f5ace8531634cb88"
+    },
+    "previews/factory/ui_boot_animate.c": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 3036,
+      "sha256": "6e6dc066d4063c2132b7e51c1e751d62a837ef3912b1fde86a74bbb9c849c5f3"
+    },
+    "previews/factory/23.png": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 12776,
+      "sha256": "e5253d663b4d11095c62c39d1e4f8b8711eefc5fa75156574e1566d7caf5d21a"
+    },
+    "previews/factory/speech-detail-review.jpg": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": null,
+      "bytes": 36249,
+      "sha256": "7bbf49dd958028add69c6b9362c2c7f476ddf239de924300ba0aa020839f2132"
+    },
+    "previews/factory/speech-review.jpg": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": null,
+      "bytes": 25097,
+      "sha256": "9f927eddc79080af6818925ddec4ab5500bf9bed94bf7b591eff05bf028ae357"
+    },
+    "previews/factory/manifest.json": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": null,
+      "bytes": 2216,
+      "sha256": "408cd5e0d72841cd6df08b75db431f0061f5a24f6db7667379e1caf4679ee6e7"
+    },
+    "previews/factory/preferred-53-55-review.jpg": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": null,
+      "bytes": 39385,
+      "sha256": "9d1c2eaf2b740b48abb74892ee819d473c99b9ef396d6548c5abe2be2995088e"
+    },
+    "previews/factory/4.png": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": "aae1b7a6d193d968cf53e42f291a60c4ca1c622c",
+      "bytes": 8473,
+      "sha256": "3a0dbfaa1a0a68e3bdfba770db62da8523bdb1bd05516993ea23d7749e521d7f"
+    },
+    "previews/factory/official-box3-demo.mp4": {
+      "source": "Official esp-box documentation/video or inspection frame; attribution manifest retained",
+      "revision": null,
+      "bytes": 7174528,
+      "sha256": "9bb0f32dc0865bd6764660e04cad7e6a6b5b0ecd46caeb38399e15a940140816"
+    },
+    "previews/factory/index.html": {
+      "source": "Local reference gallery; official source files remain unmodified",
+      "revision": null,
+      "bytes": 3654,
+      "sha256": "6f1f4a8319dc47cffc3966767b72b5b5df53604e2ddd44af925560d2cafaf386",
+      "adaptation": "Project-relative resource paths; original upstream source assets unchanged"
+    },
+    "README.md": {
+      "source": "Local archive index, visual reference page or screenshot metadata",
+      "revision": null,
+      "bytes": 4915,
+      "sha256": "76087d9be65968ab56fafa9e086af7bd71d6cf61da9c328382c47ee4921a2e80"
+    },
+    "index.html": {
+      "source": "Local archive index, visual reference page or screenshot metadata",
+      "revision": null,
+      "bytes": 4822,
+      "sha256": "ec6f5559d984e3e002d6175c1fba05f2b153f6767a2579da0b93efdad70e0fb6"
+    },
+    "media/screenshots/manifest.json": {
+      "source": "Local archive index, visual reference page or screenshot metadata",
+      "revision": null,
+      "bytes": 1582,
+      "sha256": "f22270ca3318ecb6248f9eec1f37b3899bfdaeb01ecb2fd536109b5e4a0a7693"
+    },
+    "media/screenshots/official-demo-48s-idle.png": {
+      "source": "https://www.bilibili.com/video/BV11N4y197Qu/",
+      "timestamp_seconds": 48,
+      "adaptation": "Original full video frame extracted; no redraw or upscale",
+      "bytes": 201002,
+      "sha256": "c784f3bba78bf5892fe7bda4f6a60f8aa73f99557870c157d166f54fd832d1bc"
+    },
+    "media/screenshots/official-demo-53s-listening.png": {
+      "source": "https://www.bilibili.com/video/BV11N4y197Qu/",
+      "timestamp_seconds": 53,
+      "adaptation": "Original full video frame extracted; no redraw or upscale",
+      "bytes": 188330,
+      "sha256": "318cb85e013d2e1a88cfdd904c473e6a1a45dc269118951fc756f24f6c7db565"
+    },
+    "media/screenshots/official-demo-54_5s-blink.png": {
+      "source": "https://www.bilibili.com/video/BV11N4y197Qu/",
+      "timestamp_seconds": 54.5,
+      "adaptation": "Original full video frame extracted; no redraw or upscale",
+      "bytes": 188496,
+      "sha256": "26a02e9a2021602e63c033677ed152485483b1d5ce104516ae2c74e2003d7a49"
+    },
+    "media/screenshots/official-demo-56_5s-reply.png": {
+      "source": "https://www.bilibili.com/video/BV11N4y197Qu/",
+      "timestamp_seconds": 56.5,
+      "adaptation": "Original full video frame extracted; no redraw or upscale",
+      "bytes": 185592,
+      "sha256": "d3dce767231b9dbd0d18ce2a2583d3aae9e0f1726c266c0c8dfc90eec2afbfbe"
+    }
+  },
+  "file_count": 266,
+  "total_bytes": 40933407
+}

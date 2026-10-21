@@ -1,0 +1,44 @@
+[
+  {
+    "path": "docs/_static/_get_started_static/boot_animation.png",
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/docs/_static/_get_started_static/boot_animation.png",
+    "sha256": "1a39ad7400e6861479c9e0dacdcb83ed1b0419bf22ccba38ed13eb0b41f12341",
+    "size": 28726
+  },
+  {
+    "path": "docs/_static/_get_started_static/16.png",
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/docs/_static/_get_started_static/16.png",
+    "sha256": "8aa63c33a4f739d91c3b386dbfb3f3c2ec387af53c256ad535f5020f5e27b24e",
+    "size": 4947
+  },
+  {
+    "path": "docs/_static/_get_started_static/5.1.png",
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/docs/_static/_get_started_static/5.1.png",
+    "sha256": "bba7c63999c65dfbacb417693b79f3097ca266fdb66e77e6f96f4e2b57aef348",
+    "size": 13275
+  },
+  {
+    "path": "docs/_static/_get_started_static/4.png",
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/docs/_static/_get_started_static/4.png",
+    "sha256": "3a0dbfaa1a0a68e3bdfba770db62da8523bdb1bd05516993ea23d7749e521d7f",
+    "size": 8473
+  },
+  {
+    "path": "docs/_static/_get_started_static/23.png",
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/docs/_static/_get_started_static/23.png",
+    "sha256": "e5253d663b4d11095c62c39d1e4f8b8711eefc5fa75156574e1566d7caf5d21a",
+    "size": 12776
+  },
+  {
+    "path": "examples/factory_demo/main/gui/ui_boot_animate.c",
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_boot_animate.c",
+    "sha256": "6e6dc066d4063c2132b7e51c1e751d62a837ef3912b1fde86a74bbb9c849c5f3",
+    "size": 3036
+  },
+  {
+    "path": "examples/factory_demo/main/gui/ui_sr.c",
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/examples/factory_demo/main/gui/ui_sr.c",
+    "sha256": "034e225d52ad6bf5da5ef75f77fcd6059b4cc454fea5f653f5ace8531634cb88",
+    "size": 7846
+  }
+]

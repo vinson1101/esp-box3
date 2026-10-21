@@ -1,0 +1,37 @@
+[
+  {
+    "file": "robot-sleep.png",
+    "sha256": "2e2383f89ac7e9e2c8d21dd8c66ba9529841c8bcdc5c4f00ba0dc28536f3fe3f",
+    "source": "native LVGL 9.5 host rendering; no physical-device or voice acceptance"
+  },
+  {
+    "file": "robot-listen.png",
+    "sha256": "98fb36f2b6016ac0de3e3c2a1073d7495fd8868f4dc26632d251782adcc56caa",
+    "source": "native LVGL 9.5 host rendering; no physical-device or voice acceptance"
+  },
+  {
+    "file": "robot-listen-moving.png",
+    "sha256": "11680b098573e5aaecbed730c1f1bee4e3235c99cac109ddffac2e9eefbc2aa7",
+    "source": "native LVGL 9.5 host rendering; no physical-device or voice acceptance"
+  },
+  {
+    "file": "robot-listen-blink.png",
+    "sha256": "09235bdb661bbfbde7cd6904c5be5b90c384af730c0da26b404210f08d61c952",
+    "source": "native LVGL 9.5 host rendering; no physical-device or voice acceptance"
+  },
+  {
+    "file": "robot-thinking.png",
+    "sha256": "4957aa1f524fed6d8051f433d5929530b1fa8723482ea3c551ff8add420fe108",
+    "source": "native LVGL 9.5 host rendering; no physical-device or voice acceptance"
+  },
+  {
+    "file": "robot-reply.png",
+    "sha256": "3b61c2f7b7b2c485293e7747768b7b9ea9378ee34f36fc792c2963e4a10f9890",
+    "source": "native LVGL 9.5 host rendering; no physical-device or voice acceptance"
+  },
+  {
+    "file": "robot-volume.png",
+    "sha256": "d5e9da4005ce45dbc219e0ea63ff61e5749fa3ffbc6c3dead9c2bec832eb96c6",
+    "source": "native LVGL 9.5 host rendering; no physical-device or voice acceptance"
+  }
+]

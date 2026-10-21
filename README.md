@@ -1,3 +1,15 @@
+# ESP-BOX-3 · EZ 助手版本
+
+当前分支 `codex/esp-box3-ez`，固件 `2.5.3-box3-ez.28`，专用于 ESP32-S3-BOX-3 连接本机 EZ 助手。
+
+- [版本、构建与验证边界](docs/releases/esp-box3-ez-28.md)
+- [技术计划](docs/ESP_BOX3_EZ_TECHNICAL_PLAN.md) · [集成架构](docs/ESP_BOX3_EZ_INTEGRATION.md)
+- [官方文档、动画及传感器参考资料](docs/references/esp-box3/README.md)
+
+下方保留上游项目说明及其许可证/贡献资料。本分支的实际功能与配置以以上 EZ 版本文档为准；运行凭据和个人测试数据不包含在仓库中。
+
+---
+
 # An MCP-based Chatbot
 
 (English | [中文](README_zh.md) | [日本語](README_ja.md))

@@ -33,6 +33,23 @@ The AFE configuration currently uses `FD_LOW_COST` AEC with
 `AEC_NLP_LEVEL_VERYAGGR`. WebRTC/NSNet noise suppression is intentionally
 disabled because the project does not ship an NSNet model.
 
+The BOX-3 EZ variant packages Espressif's `vadnet1_medium` and uses its
+128 ms speech confirmation, 1000 ms silence confirmation and 128 ms onset delay.
+The EZ endpoint consumes the AFE-confirmed silence directly; it does not add the
+old 75-frame raw-energy tail window. The model is required at initialization,
+so a missing/old assets image cannot silently select WebRTC VAD. Other variants
+retain their existing VAD configuration. Voice output forwards every AFE data
+frame, including frames before VAD confirms speech. It must not prepend the
+retrospective VAD cache, which repeats onset samples already in that continuous
+stream. EZ follow-up listening retains its own continuous PCM pre-roll once.
+
+When voice processing is disabled, its output reset is deferred to the AFE
+output task. Before the next session's PCM is delivered, that task clears both
+its VAD state and the `AudioService` VAD callback state, then applies the new
+frame's detection. Resetting only the engine's transition flag can leave the
+service stuck in speech while later frames are silent. The service publishes
+its cached VAD flag atomically for readers on the application task.
+
 When wake-word audio upload is enabled, the most recent two seconds of PCM are
 stored in a single 64 KB PSRAM ring buffer. WakeNet and MultiNet share the same
 cache implementation, and the encoder reads it one Opus frame at a time. This

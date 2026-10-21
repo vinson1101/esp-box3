@@ -1,0 +1,34 @@
+[
+  {
+    "file": "media/screenshots/official-demo-48s-idle.png",
+    "timestamp_seconds": 48,
+    "source_video": "previews/factory/official-box3-demo.mp4",
+    "source_url": "https://www.bilibili.com/video/BV11N4y197Qu/",
+    "transformation": "Original full video frame extracted; no redraw or upscale",
+    "sha256": "c784f3bba78bf5892fe7bda4f6a60f8aa73f99557870c157d166f54fd832d1bc"
+  },
+  {
+    "file": "media/screenshots/official-demo-53s-listening.png",
+    "timestamp_seconds": 53,
+    "source_video": "previews/factory/official-box3-demo.mp4",
+    "source_url": "https://www.bilibili.com/video/BV11N4y197Qu/",
+    "transformation": "Original full video frame extracted; no redraw or upscale",
+    "sha256": "318cb85e013d2e1a88cfdd904c473e6a1a45dc269118951fc756f24f6c7db565"
+  },
+  {
+    "file": "media/screenshots/official-demo-54_5s-blink.png",
+    "timestamp_seconds": 54.5,
+    "source_video": "previews/factory/official-box3-demo.mp4",
+    "source_url": "https://www.bilibili.com/video/BV11N4y197Qu/",
+    "transformation": "Original full video frame extracted; no redraw or upscale",
+    "sha256": "26a02e9a2021602e63c033677ed152485483b1d5ce104516ae2c74e2003d7a49"
+  },
+  {
+    "file": "media/screenshots/official-demo-56_5s-reply.png",
+    "timestamp_seconds": 56.5,
+    "source_video": "previews/factory/official-box3-demo.mp4",
+    "source_url": "https://www.bilibili.com/video/BV11N4y197Qu/",
+    "transformation": "Original full video frame extracted; no redraw or upscale",
+    "sha256": "d3dce767231b9dbd0d18ce2a2583d3aae9e0f1726c266c0c8dfc90eec2afbfbe"
+  }
+]

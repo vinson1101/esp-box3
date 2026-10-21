@@ -43,11 +43,24 @@ AudioService::~AudioService() {
     if (output_resampler_ != nullptr) {
         esp_ae_rate_cvt_close(output_resampler_);
     }
+#if CONFIG_EZ_DEVICE_GATEWAY
+    if (pcm_output_resampler_ != nullptr) {
+        esp_ae_rate_cvt_close(pcm_output_resampler_);
+    }
+#endif
 }
 
 void AudioService::Initialize(AudioCodec* codec) {
     codec_ = codec;
     codec_->Start();
+#if CONFIG_EZ_DEVICE_GATEWAY
+    if (codec->output_sample_rate() != 16000) {
+        auto cfg = RATE_CVT_CFG(16000, codec->output_sample_rate(), ESP_AUDIO_MONO);
+        ESP_ERROR_CHECK(esp_ae_rate_cvt_open(&cfg, &pcm_output_resampler_) == ESP_AE_ERR_OK
+                            ? ESP_OK
+                            : ESP_FAIL);
+    }
+#endif
 
     esp_opus_dec_cfg_t opus_dec_cfg =
         OPUS_DEC_CFG(codec->output_sample_rate(), OPUS_FRAME_DURATION_MS);
@@ -85,7 +98,13 @@ void AudioService::Initialize(AudioCodec* codec) {
     audio_engine_ = std::make_unique<LiteAudioEngine>();
 #endif
     audio_engine_->OnOutput([this](std::vector<int16_t>&& data) {
+#if CONFIG_EZ_DEVICE_GATEWAY
+        if (callbacks_.on_pcm) {
+            callbacks_.on_pcm(data);
+        }
+#else
         PushTaskToEncodeQueue(kAudioTaskTypeEncodeToSendQueue, std::move(data));
+#endif
     });
     audio_engine_->OnVadStateChange([this](bool speaking) {
         voice_detected_ = speaking;
@@ -798,6 +817,46 @@ bool AudioService::IsPlaybackIdle() {
     std::lock_guard<std::mutex> lock(audio_queue_mutex_);
     return IsPlaybackDrainedLocked();
 }
+
+#if CONFIG_EZ_DEVICE_GATEWAY
+uint32_t AudioService::PlaybackGeneration() {
+    std::lock_guard<std::mutex> lock(audio_queue_mutex_);
+    return playback_generation_;
+}
+
+bool AudioService::PushPcmToPlaybackQueue(std::vector<int16_t> pcm, uint32_t generation) {
+    if (pcm.empty() || pcm.size() > 320) {
+        return false;
+    }
+    if (pcm_output_resampler_) {
+        uint32_t capacity = 0;
+        esp_ae_rate_cvt_get_max_out_sample_num(pcm_output_resampler_, pcm.size(), &capacity);
+        std::vector<int16_t> converted(capacity);
+        uint32_t count = capacity;
+        if (esp_ae_rate_cvt_process(pcm_output_resampler_, pcm.data(), pcm.size(), converted.data(),
+                                    &count) != ESP_AE_ERR_OK) {
+            return false;
+        }
+        converted.resize(count);
+        pcm = std::move(converted);
+    }
+    std::unique_lock<std::mutex> lock(audio_queue_mutex_);
+    audio_queue_cv_.wait(lock, [this, generation]() {
+        return service_stopped_.load() || generation != playback_generation_ ||
+               !audio_playback_queue_.full();
+    });
+    if (service_stopped_.load() || generation != playback_generation_) {
+        return false;
+    }
+    AudioTask task{};
+    task.type = kAudioTaskTypeDecodeToPlaybackQueue;
+    task.pcm = std::move(pcm);
+    playback_drained_notified_ = false;
+    audio_playback_queue_.push_back(std::move(task));
+    audio_queue_cv_.notify_all();
+    return true;
+}
+#endif
 
 void AudioService::ResetDecoder() {
     bool notify_drained = false;

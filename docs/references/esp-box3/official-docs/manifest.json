@@ -1,0 +1,17 @@
+{
+  "README_cn.md": {
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/master/README_cn.md",
+    "bytes": 11954,
+    "sha256": "b61f58f3ab39cc8544554d0b28d8a865c287f11978cbf791f1de5e61435d246c"
+  },
+  "getting_started_cn.md": {
+    "url": "https://raw.githubusercontent.com/espressif/esp-box/master/docs/getting_started_cn.md",
+    "bytes": 16242,
+    "sha256": "6f9b52f0dabc9ff40ef4a761b33b7f3ffefa848c623b863271157547cd2e781f"
+  },
+  "esp32_s3_box_3.html": {
+    "url": "https://docs.espressif.com/projects/esp-board-manager/zh_CN/latest/references/boards/esp32_s3_box_3.html",
+    "bytes": 25988,
+    "sha256": "35242db1bf975728d85d89bf333b60db3866cf644ce95c034ac2298c78bb9b18"
+  }
+}

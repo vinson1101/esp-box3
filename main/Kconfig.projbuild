@@ -1,5 +1,20 @@
 menu "Xiaozhi Assistant"
 
+config EZ_DEVICE_GATEWAY
+    bool "Connect to the local EZ Assistant Device Gateway"
+    depends on BOARD_TYPE_ESP32_S3_BOX_3
+    default n
+    help
+        Use native EZ discovery, pairing and PCM audio instead of cloud activation.
+
+config LOCAL_WAKE_ONLY
+    bool "Local wake feedback without a backend"
+    depends on !EZ_DEVICE_GATEWAY
+    default n
+    help
+        Load bundled wake models at boot and acknowledge wake words locally.
+        Skip backend activation, OTA checks and conversation connections.
+
 config OTA_URL
     string "Default OTA URL"
     default "https://api.tenclass.net/xiaozhi/ota/"

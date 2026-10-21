@@ -11,6 +11,9 @@
 #include "system_info.h"
 #include "text_glyph_payload.h"
 #include "websocket_protocol.h"
+#if CONFIG_EZ_DEVICE_GATEWAY
+#include "ez/ez_device.h"
+#endif
 
 #include <driver/gpio.h>
 #include <esp_log.h>
@@ -81,6 +84,11 @@ void Application::Initialize() {
     SystemInfo::PrintHeapStats();
 
     AudioServiceCallbacks callbacks;
+#if CONFIG_EZ_DEVICE_GATEWAY
+    callbacks.on_pcm = [](const std::vector<int16_t>& pcm) {
+        EzDevice::GetInstance().Capture(pcm);
+    };
+#endif
     callbacks.on_send_queue_available = [this]() {
         xEventGroupSetBits(event_group_, MAIN_EVENT_SEND_AUDIO);
     };
@@ -171,6 +179,19 @@ void Application::Initialize() {
         }
     });
 
+#if CONFIG_LOCAL_WAKE_ONLY || CONFIG_EZ_DEVICE_GATEWAY
+    // Local wake models must be available before Wi-Fi or backend initialization.
+    if (Assets::GetInstance().Apply()) {
+        audio_service_.EnableWakeWordDetection(true);
+        ESP_LOGI(TAG, "Bundled wake assets loaded before network initialization");
+    } else {
+        ESP_LOGE(TAG, "Local wake mode: failed to load bundled assets");
+    }
+#endif
+
+#if CONFIG_EZ_DEVICE_GATEWAY
+    EzDevice::GetInstance().Initialize();
+#endif
     // Start network asynchronously
     board.StartNetwork();
 
@@ -261,6 +282,9 @@ void Application::Run() {
         }
 
         if (bits & MAIN_EVENT_VAD_CHANGE) {
+#if CONFIG_EZ_DEVICE_GATEWAY
+            EzDevice::GetInstance().VadChanged(audio_service_.IsVoiceDetected());
+#endif
             if (GetDeviceState() == kDeviceStateListening) {
                 auto led = Board::GetInstance().GetLed();
                 led->OnStateChanged();
@@ -277,6 +301,9 @@ void Application::Run() {
         }
 
         if (bits & MAIN_EVENT_CLOCK_TICK) {
+#if CONFIG_EZ_DEVICE_GATEWAY
+            EzDevice::GetInstance().Tick();
+#endif
             clock_ticks_++;
             auto display = Board::GetInstance().GetDisplay();
             display->UpdateStatusBar();
@@ -300,6 +327,13 @@ void Application::HandleNetworkConnectedEvent() {
     auto state = GetDeviceState();
 
     if (state == kDeviceStateStarting || state == kDeviceStateWifiConfiguring) {
+#if CONFIG_LOCAL_WAKE_ONLY || CONFIG_EZ_DEVICE_GATEWAY
+        SetDeviceState(kDeviceStateActivating);
+        startup_completed_ = true;
+        pending_startup_wake_word_hint_ = true;
+        SetDeviceState(kDeviceStateIdle);
+        ESP_LOGI(TAG, "Local wake mode: network ready, backend initialization skipped");
+#else
         // Network is ready, start activation
         SetDeviceState(kDeviceStateActivating);
         if (activation_task_handle_ != nullptr) {
@@ -315,14 +349,24 @@ void Application::HandleNetworkConnectedEvent() {
                 vTaskDelete(NULL);
             },
             "activation", 4096 * 2, this, 2, &activation_task_handle_);
+#endif
     }
 
     // Update the status bar immediately to show the network state
+#if CONFIG_EZ_DEVICE_GATEWAY
+    Board::GetInstance().GetDisplay()->ClearChatMessages();
+    EzDevice::GetInstance().NetworkChanged(true);
+#endif
     auto display = Board::GetInstance().GetDisplay();
     display->UpdateStatusBar(true);
 }
 
 void Application::HandleNetworkDisconnectedEvent() {
+#if CONFIG_EZ_DEVICE_GATEWAY
+    EzDevice::GetInstance().NetworkChanged(false);
+    Board::GetInstance().GetDisplay()->UpdateStatusBar(true);
+    return;
+#endif
     // Close current conversation when network disconnected
     auto state = GetDeviceState();
     if (state == kDeviceStateNotifying) {
@@ -791,6 +835,10 @@ void Application::StartListening() { xEventGroupSetBits(event_group_, MAIN_EVENT
 void Application::StopListening() { xEventGroupSetBits(event_group_, MAIN_EVENT_STOP_LISTENING); }
 
 void Application::HandleToggleChatEvent() {
+#if CONFIG_EZ_DEVICE_GATEWAY
+    EzDevice::GetInstance().Toggle();
+    return;
+#endif
     auto state = GetDeviceState();
 
     if (state == kDeviceStateNotifying) {
@@ -855,6 +903,10 @@ void Application::ContinueOpenAudioChannel(ListeningMode mode) {
 }
 
 void Application::HandleStartListeningEvent() {
+#if CONFIG_EZ_DEVICE_GATEWAY
+    EzDevice::GetInstance().Wake();
+    return;
+#endif
     auto state = GetDeviceState();
 
     if (state == kDeviceStateNotifying) {
@@ -891,6 +943,10 @@ void Application::HandleStartListeningEvent() {
 }
 
 void Application::HandleStopListeningEvent() {
+#if CONFIG_EZ_DEVICE_GATEWAY
+    EzDevice::GetInstance().StopCapture();
+    return;
+#endif
     auto state = GetDeviceState();
 
     if (state == kDeviceStateNotifying) {
@@ -908,6 +964,15 @@ void Application::HandleStopListeningEvent() {
 }
 
 void Application::HandleWakeWordDetectedEvent() {
+#if CONFIG_EZ_DEVICE_GATEWAY
+    EzDevice::GetInstance().Wake();
+#elif CONFIG_LOCAL_WAKE_ONLY
+    const auto& wake_word = audio_service_.GetLastWakeWord();
+    ESP_LOGI(TAG, "Local wake word detected: %s", wake_word.c_str());
+    Board::GetInstance().GetDisplay()->ShowNotification(wake_word, 3000);
+    audio_service_.PlaySound(Lang::Sounds::OGG_POPUP);
+    audio_service_.EnableWakeWordDetection(true);
+#else
     if (!protocol_) {
         return;
     }
@@ -942,6 +1007,7 @@ void Application::HandleWakeWordDetectedEvent() {
         // Restart the activation check if the wake word is detected during activation
         SetDeviceState(kDeviceStateIdle);
     }
+#endif
 }
 
 void Application::BeginWakeWordInvoke(const std::string& wake_word) {
@@ -1017,6 +1083,10 @@ void Application::HandleStateChangedEvent() {
     auto led = board.GetLed();
     led->OnStateChanged();
 
+#if CONFIG_EZ_DEVICE_GATEWAY
+    EzDevice::GetInstance().ProjectState();
+    return;
+#endif
     switch (new_state) {
         case kDeviceStateUnknown:
         case kDeviceStateIdle:
@@ -1073,7 +1143,11 @@ void Application::HandleStateChangedEvent() {
             break;
         case kDeviceStateWifiConfiguring:
             audio_service_.EnableVoiceProcessing(false);
+#if CONFIG_LOCAL_WAKE_ONLY
+            audio_service_.EnableWakeWordDetection(true);
+#else
             audio_service_.EnableWakeWordDetection(false);
+#endif
             break;
         default:
             // Do nothing
@@ -1082,6 +1156,11 @@ void Application::HandleStateChangedEvent() {
 }
 
 void Application::ShowStartupWakeWordHint() {
+#if CONFIG_EZ_DEVICE_GATEWAY
+    // EZ already displays its wake hint; do not project it as an assistant answer.
+    pending_startup_wake_word_hint_ = false;
+    return;
+#endif
     // A coalesced activation/state event can queue another idle UI cleanup.
     // Wait for it before adding the hint, or ClearChatMessages() would erase it.
     if (!pending_startup_wake_word_hint_ ||

@@ -1,0 +1,283 @@
+{
+  "repository": "https://github.com/vinson1101/agent-robot",
+  "commit": "2f4a83396453217f57ce761817da9a8f36688bed",
+  "files": [
+    {
+      "path": "host_discovery/host_discovery.c",
+      "sha256": "01cc7e01b514329a36e0bfde5fb985c828d867e35a5af9674e49a9c647643187"
+    },
+    {
+      "path": "host_discovery/host_selection.c",
+      "sha256": "db0d09e5f0f1d519ec66bf04285a8cd11d4592941904df4b09012898db57139a"
+    },
+    {
+      "path": "host_discovery/include/host_discovery.h",
+      "sha256": "4b0507794f940ba68314da77c9312d366e78485b034bb1585eed3a0799323966"
+    },
+    {
+      "path": "wss_transport/include/wss_transport.h",
+      "sha256": "48839a9d5462909b390006ef34c268aa80c6e3437d803d60c9a691023a770ee3"
+    },
+    {
+      "path": "wss_transport/private_include/wss_frame_codec.h",
+      "sha256": "1038a2a4e83ed40d14d539f1dc8f4bc004c27e64dbf6952877776ebf885c0ad5"
+    },
+    {
+      "path": "wss_transport/private_include/wss_upgrade.h",
+      "sha256": "78bed42803f29bbc8ebff23763a792861e18188b2e8bfc53dce8e8e1152fb545"
+    },
+    {
+      "path": "wss_transport/wss_frame_codec.c",
+      "sha256": "672f72f9d955dcc339754e2f60c593c4b15e1a46af4c57a683e1c47187258a77"
+    },
+    {
+      "path": "wss_transport/wss_transport.c",
+      "sha256": "584ac11a187821276e1be889d8633fdcfe9caa9f87213815b6d08a9f33e867f5"
+    },
+    {
+      "path": "wss_transport/wss_upgrade.c",
+      "sha256": "40283ae83dda780d24c08f9a4d0bc0c1c295df98e36322e7fa5c159fe228417a"
+    },
+    {
+      "path": "device_protocol/device_application_heartbeat.c",
+      "sha256": "34587537eae8eb3d62ca251dbe9439b6773846e7e56775100affeac7d67434b6"
+    },
+    {
+      "path": "device_protocol/device_capabilities.c",
+      "sha256": "3380a2a837d9b3f60429e63bdab0eb8c219b1a80291433aa87d5d27f63c75ee3"
+    },
+    {
+      "path": "device_protocol/device_control_envelope.c",
+      "sha256": "f03f74cb18ed1fb47493d5cad50d21d5f4ff153b170ac916b7f4f90fe20996ae"
+    },
+    {
+      "path": "device_protocol/device_media_control.c",
+      "sha256": "beff281de5bbb69420d2ef506d839febe8b4c8e10428c750c2c9cf434150e6a6"
+    },
+    {
+      "path": "device_protocol/device_message_replay_window.c",
+      "sha256": "f5fc9b6306f1c77e0a0a8a1566e0908f858a1ccfa3e505a282d284768ad471ca"
+    },
+    {
+      "path": "device_protocol/device_pcm_frame.c",
+      "sha256": "9df718ef7383606e3356fdbad93576d872ae83d60759c4d4917918ab0f73ede8"
+    },
+    {
+      "path": "device_protocol/include/device_application_heartbeat.h",
+      "sha256": "b7035ec71b8b82cb7fcac67c530495a91196052625d68c1ce498ae5e73f99c93"
+    },
+    {
+      "path": "device_protocol/include/device_capabilities.h",
+      "sha256": "ec72d37ef74d64e4a1f9cf425df3712a96fb4f64f21b33a2749cd66ddd88cdbb"
+    },
+    {
+      "path": "device_protocol/include/device_control_envelope.h",
+      "sha256": "eaa51c582754b50cec3950c4db8361fa1d91e6e4cd385339c07d7533c1e847d4"
+    },
+    {
+      "path": "device_protocol/include/device_media_control.h",
+      "sha256": "d7219fc1814b42400b84e9b6e261e32f1d138b2bb52f57188a2c8a5f9da3b6c4"
+    },
+    {
+      "path": "device_protocol/include/device_message_replay_window.h",
+      "sha256": "e1daf96cd57790d321f1b3353b49b50de8432be3797ddf58c16a8a563b387efa"
+    },
+    {
+      "path": "device_protocol/include/device_pcm_frame.h",
+      "sha256": "84ca59bc749d114e407e71af40383132f38a0164c9cd4ebbeaefd291c1c4f82c"
+    },
+    {
+      "path": "device_protocol/include/device_protocol_limits.h",
+      "sha256": "e0e3c5858f54f839ddbdd31a16f5fb2d5b7d24479cc0af67ce553a210fb3832f"
+    },
+    {
+      "path": "device_protocol/include/device_protocol_result.h",
+      "sha256": "6a3b3a646b4ec5763993724ab700d01b967797d7baa675fcd744a5ee3df188f9"
+    },
+    {
+      "path": "device_protocol/include/device_protocol_version.h",
+      "sha256": "96813cdf3bfb82bee7010026291a9b33a14298eb3d8de87c0310238da0143300"
+    },
+    {
+      "path": "device_pairing/device_pairing.c",
+      "sha256": "c5ed5a402ff3b414f88d4785288410f4e5bcb602213e5e523a3a7af72045c1e5"
+    },
+    {
+      "path": "device_pairing/device_pairing_protocol.c",
+      "sha256": "702094126cda1618a1f9e4528aebe11b6012d48032c5a8ca8f00e740fc1e7bdb"
+    },
+    {
+      "path": "device_pairing/include/device_pairing.h",
+      "sha256": "98269fe3151dd66f04a6e2248db2d8a03478827e0d06455e9a33e78c1efd9f62"
+    },
+    {
+      "path": "device_pairing/include/device_pairing_protocol.h",
+      "sha256": "073d1282da4eda51f54795d46e8855825829f7ac05e88be069f1293da0d996b9"
+    },
+    {
+      "path": "device_authentication/device_authentication.c",
+      "sha256": "570bdf35b7354c0ec30d7b966291f9f3e3fe583937f84e865e45c696ac5b3360"
+    },
+    {
+      "path": "device_authentication/include/device_authentication.h",
+      "sha256": "f285ed278a1beda3217ef0e2c72393b89280b5fdb76688b1824b55888ee705d0"
+    },
+    {
+      "path": "device_crypto/device_base64url.c",
+      "sha256": "17d1915551a5eb6653851d26595e0133596b0f12c684c37a49b94c68fae20b65"
+    },
+    {
+      "path": "device_crypto/device_ed25519.c",
+      "sha256": "33276fb7fd839b731f89201c0e54be15ef3193061cb6cf0d5bad4d0cf39e2ebb"
+    },
+    {
+      "path": "device_crypto/device_hardware_random.c",
+      "sha256": "9e0a4f08ba4dde306549873cb2733e0a89db816fb246baa8204cf8a948730a75"
+    },
+    {
+      "path": "device_crypto/device_spake2.c",
+      "sha256": "b5168f33bd1d7d96a2f71c82127cbc7d159437832e1c9fcc6333f55850a38dda"
+    },
+    {
+      "path": "device_crypto/device_transcript.c",
+      "sha256": "1fa4396b0dbe2e4f7ba45cc5666b5a35a171a03e35b674f743089af3dd02f92b"
+    },
+    {
+      "path": "device_crypto/include/device_base64url.h",
+      "sha256": "550e1773ecff686717ebe8a501cce55309560e51113cbceafdecc837cebae2b6"
+    },
+    {
+      "path": "device_crypto/include/device_crypto_result.h",
+      "sha256": "84ecedc4192cdec8d4ba8d4ea813cd7075b162be1167265a1430026ecbdac0b5"
+    },
+    {
+      "path": "device_crypto/include/device_ed25519.h",
+      "sha256": "93bc3cad42550bf26d901c469834794f8169bab4d922d2dd5392f36de72f2ded"
+    },
+    {
+      "path": "device_crypto/include/device_hardware_random.h",
+      "sha256": "e37075aa4c27d33c3b30ec49313c221452a885299a3fbbeb344bbd5550a9dabb"
+    },
+    {
+      "path": "device_crypto/include/device_random_source.h",
+      "sha256": "e84c0da1f3696b4babbe4dd4af07085edb290f0e3da878bee8b9b94a6063bb4e"
+    },
+    {
+      "path": "device_crypto/include/device_spake2.h",
+      "sha256": "b3dc639dec38bbee5672405a01bed5c414281bbc4921ed7789faaa1cc7a33bac"
+    },
+    {
+      "path": "device_crypto/include/device_transcript.h",
+      "sha256": "8b9ff68065759422372f7e5c10644486c97a6c270b10802b01a76b1595d5c809"
+    },
+    {
+      "path": "device_crypto/third_party/monocypher/LICENCE.md",
+      "sha256": "5f8360e4c06ddcc584bdb4b210c6af824c4bb301e6a9a521869b6d90795ca4b3"
+    },
+    {
+      "path": "device_crypto/third_party/monocypher/README.md",
+      "sha256": "55883508c293e514d6dfb7ec84aa320bf19cb75d72ef6448e83a5eeb4d2e58d4"
+    },
+    {
+      "path": "device_crypto/third_party/monocypher/monocypher-ed25519.c",
+      "sha256": "60fce3578fb00b00da96490653d993c4cb427b1e1be38183285c66e04d22cc18"
+    },
+    {
+      "path": "device_crypto/third_party/monocypher/monocypher-ed25519.h",
+      "sha256": "abc4fad381879f5c29176ebe014b9189956b3dfe0a3e36459b6990bc57212380"
+    },
+    {
+      "path": "device_crypto/third_party/monocypher/monocypher.c",
+      "sha256": "57eb914fc88136119bd41655cccb8c250048bf54d470540625186f8ab16f64be"
+    },
+    {
+      "path": "device_crypto/third_party/monocypher/monocypher.h",
+      "sha256": "c494da712122da7ff679fdcf318a5317e84972b6c950fe9d896212947797facd"
+    },
+    {
+      "path": "device_identity/device_identity.c",
+      "sha256": "62d965350c65de3802a6de40235d45423d4830d1d491d3ef9e2d9be647560244"
+    },
+    {
+      "path": "device_identity/device_identity_record.c",
+      "sha256": "28a07d04696f5edb7bc252d00227fd71cdfdadbf3dcd9baa8f7d8f626dca5297"
+    },
+    {
+      "path": "device_identity/include/device_identity.h",
+      "sha256": "e9b2f3fef24b6e887cca926781fbc55243c55583494a3e4dab7a8bcc6ef1caca"
+    },
+    {
+      "path": "device_identity/private_include/device_identity_record.h",
+      "sha256": "a64fec9aa3e130c63e4a9edd4df932c8b463cc97034f6b30ee59683cfca0eef3"
+    },
+    {
+      "path": "device_connection/device_connection.c",
+      "sha256": "5e5086ca903102af53aadff040dfed6d573ef7851957bac03136f3c6852d29b7"
+    },
+    {
+      "path": "device_connection/device_connection_supervisor.c",
+      "sha256": "56d65c7f7f9202b0dc4b6c5d3e24c748422480091b128a973db365284156f810"
+    },
+    {
+      "path": "device_connection/include/device_connection.h",
+      "sha256": "ed13d435c4fe51197a21756e4755b735cba144576a4cf189c226800bbbf02800"
+    },
+    {
+      "path": "device_connection/include/device_connection_supervisor.h",
+      "sha256": "863fbeb35cbe04aeea81275e7684e383d9773457e1ff65a455bb7754de811a92"
+    },
+    {
+      "path": "voice_input/include/voice_input.h",
+      "sha256": "6710c2227ece071249538035b26aadb931c5c73586f560f4e98a2a03f3d8959e"
+    },
+    {
+      "path": "voice_input/voice_input.c",
+      "sha256": "7977376f055f5728da1bbb494ea8382304638f447017d10e518a16724682eb79"
+    },
+    {
+      "path": "utterance_cache/include/utterance_cache.h",
+      "sha256": "213483b6fe36fc28eaadf3c7056663179f52daef05c292db46bc75feef5589c3"
+    },
+    {
+      "path": "utterance_cache/private_include/utterance_cache_memory.h",
+      "sha256": "b65923b2ec966be7c74bb196e213942804ee743b74dd93c1cbdbc226a9f38176"
+    },
+    {
+      "path": "utterance_cache/utterance_cache.c",
+      "sha256": "677cf74b47375e879c639b9b79b4956628de0fca0842d1de5c8bfb654b9f33db"
+    },
+    {
+      "path": "utterance_cache/utterance_cache_memory.c",
+      "sha256": "c189d4f93112a8b948ae30f8e6f0c7bed0a62bf2b46431e00df376f1ff8d27f2"
+    },
+    {
+      "path": "playback/audio_playback_queue.c",
+      "sha256": "aafb72758c9b1a75bcd58536c2aaec6313bf9502ea51dfc145a157a93add25fa"
+    },
+    {
+      "path": "playback/audio_playback_queue_memory.c",
+      "sha256": "1c9953041d714641646b2e5d6a7dc02d1448f71c2130faf912275a926149efc7"
+    },
+    {
+      "path": "playback/audio_playback_queue.h",
+      "sha256": "f8ff49e62a42712abaeae3f8681fe1bb34909206b04d1ebabf0547facccc2a52"
+    },
+    {
+      "path": "playback/audio_playback_queue_memory.h",
+      "sha256": "75a70f70f23ed3bb2c657b0bc84bbe8c1dda4d47abb52d4ec0bbc8d83d8beaf9"
+    }
+  ],
+  "local_adaptations": {
+    "description": "Source hashes above identify the imported baseline, not current local file hashes. BOX-3 text projection adds strict transcript/text_output decoding, borrowed text events copied on the application task, and recording input identifiers.",
+    "paths": [
+      "device_protocol/device_control_envelope.c",
+      "device_protocol/device_media_control.c",
+      "device_protocol/include/device_media_control.h",
+      "device_protocol/include/device_protocol_limits.h",
+      "device_connection/device_connection.c",
+      "device_connection/include/device_connection.h",
+      "voice_input/voice_input.c",
+      "voice_input/include/voice_input.h"
+    ]
+  }
+}

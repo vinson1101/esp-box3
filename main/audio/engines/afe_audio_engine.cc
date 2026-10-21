@@ -135,8 +135,21 @@ bool AfeAudioEngine::Initialize(AudioCodec* codec, int frame_duration_ms,
     afe_config->aec_nlp_level = AEC_NLP_LEVEL_VERYAGGR;
     afe_config->ns_init = false;
     afe_config->vad_init = kUseAfeForVoiceProcessing;
+#if CONFIG_EZ_DEVICE_GATEWAY
+    if (vad_model_name == nullptr) {
+        ESP_LOGE(TAG, "EZ capture requires the configured VADNet model in assets");
+        afe_config_free(afe_config);
+        return false;
+    }
+    // Use ESP-SR's own onset/hangover; EZ must not add another silence window.
+    afe_config->vad_mode = VAD_MODE_1;
+    afe_config->vad_min_speech_ms = 128;
+    afe_config->vad_min_noise_ms = 1000;
+    afe_config->vad_delay_ms = 128;
+#else
     afe_config->vad_mode = VAD_MODE_0;
     afe_config->vad_min_noise_ms = 100;
+#endif
     if (vad_model_name != nullptr) {
         afe_config->vad_model_name = vad_model_name;
     }
@@ -181,6 +194,9 @@ bool AfeAudioEngine::Initialize(AudioCodec* codec, int frame_duration_ms,
             }
         }
     }
+    ESP_LOGI(TAG, "Capture AFE: NS=%d VAD=%d neural=%d min_speech_ms=%d min_noise_ms=%d",
+             afe_config->ns_init, afe_config->vad_mode, vad_model_name != nullptr,
+             afe_config->vad_min_speech_ms, afe_config->vad_min_noise_ms);
     afe_config->agc_init = false;
     afe_config->memory_alloc_mode = AFE_MEMORY_ALLOC_MORE_PSRAM;
 
@@ -302,7 +318,6 @@ void AfeAudioEngine::EnableVoiceProcessing(bool enable) {
         xEventGroupSetBits(event_group_, kVoiceProcessingEnabled);
     } else {
         xEventGroupClearBits(event_group_, kVoiceProcessingEnabled);
-        is_speaking_ = false;
     }
     UpdateActiveState();
 }
@@ -410,6 +425,12 @@ void AfeAudioEngine::ApplyPendingReset() {
     // serializes the reset against Feed(); fetch/reset both run in this task.
     std::lock_guard<std::mutex> lock(input_buffer_mutex_);
     input_buffer_.clear();
+    // reset_buffer only drains PCM; the previous speech/silence decision lives in VAD.
+    if (kUseAfeForVoiceProcessing) {
+        int result = afe_iface_->reset_vad(afe_data_);
+        ESP_LOGI(TAG, "VAD reset result=%d generation=%lu", result,
+                 static_cast<unsigned long>(control_generation_.load()));
+    }
     afe_iface_->reset_buffer(afe_data_);
 }
 
@@ -483,6 +504,10 @@ void AfeAudioEngine::HandleWakeWordResult(const afe_fetch_result_t* result) {
 void AfeAudioEngine::HandleVoiceResult(const afe_fetch_result_t* result) {
     if (output_reset_pending_.exchange(false)) {
         output_buffer_.clear();
+        // Reset both VAD views on the output-owning task before any new-session PCM.
+        is_speaking_ = false;
+        if (vad_state_change_callback_)
+            vad_state_change_callback_(false);
     }
     if (vad_state_change_callback_) {
         if (result->vad_state == VAD_SPEECH && !is_speaking_) {
@@ -497,6 +522,7 @@ void AfeAudioEngine::HandleVoiceResult(const afe_fetch_result_t* result) {
         return;
     }
 
+    // Continuous output already contains the onset samples repeated by vad_cache.
     size_t samples = result->data_size / sizeof(int16_t);
     output_buffer_.insert(output_buffer_.end(), result->data, result->data + samples);
     while (output_buffer_.size() >= static_cast<size_t>(frame_samples_)) {

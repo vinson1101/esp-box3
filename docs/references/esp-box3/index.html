@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOX-3 计划 · 官方视觉与功能参考</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#10151c;color:#ecf1f7;font:16px/1.65 -apple-system,BlinkMacSystemFont,sans-serif}main{max-width:1100px;margin:auto;padding:26px 22px}h1{font-size:27px;margin:0 0 8px}h2{font-size:21px;margin:25px 0 12px}p{color:#b1bfd0;margin:8px 0 16px}a{color:#88ceff}.note,article{padding:18px;background:#192330;border:1px solid #334155;border-radius:12px;margin:18px 0}video{width:100%;display:block;background:#000;border-radius:9px}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}figure{margin:0;padding:12px;border:1px solid #334155;border-radius:12px;background:#192330}img{width:100%;display:block;border-radius:6px}figcaption{padding:10px 0 0}small{display:block;font-size:13px;color:#a4b5c9}button{padding:8px 14px;background:#23384e;border:1px solid #6382a1;border-radius:8px;color:#eef7ff;cursor:pointer;margin-bottom:12px}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:10px;border-bottom:1px solid #334155;text-align:left}footer{font-size:13px;color:#a4b5c9;margin-top:25px}</style>
+<main>
+<h1>BOX-3 计划中的官方视觉参考</h1>
+<p>2026-10-21 · 用户首选：官方演示 00:53–00:55 的小球机器人。资料、原图和源代码已保存在 esp-box3 项目。</p>
+<div class="note">来源是乐鑫官方 <strong>chatgpt_demo</strong>（LVGL / SquareLine Studio），与旧 factory_demo 麦克风柱条、Emote 双眼、小智默认 PNG 分别记录。后端继续使用 EZ；本页保留官方参考效果，固件实现及验收状态以项目技术计划和部署记录为准。</div>
+<article><h2>用户选定的 53–55 秒效果</h2>
+<p>完整原视频保持原样；按钮从所选位置播放。截图直接取原帧，未重画或提升分辨率。</p>
+<button onclick="document.querySelector('video').currentTime=53;document.querySelector('video').play()">播放 53 秒起的小球机器人</button>
+<video controls muted playsinline preload="metadata" src="previews/factory/official-box3-demo.mp4#t=53,55"></video>
+<small><a href="https://www.bilibili.com/video/BV11N4y197Qu/">乐鑫信息科技官方视频</a> · 约 56 秒可看到文字回复面板。</small></article>
+<h2>计划正文已包含以下原始截图</h2>
+<section>
+<figure><img src="media/screenshots/official-demo-48s-idle.png" alt="00:48 官方小球机器人待机"><figcaption>待机／起伏参考 · 00:48<small>源码：Sleep 面板，球体起伏和 Z 提示；不等于硬件休眠。</small></figcaption></figure>
+<figure><img src="media/screenshots/official-demo-53s-listening.png" alt="00:53 官方小球机器人聆听"><figcaption>聆听 · 00:53<small>用户首选风格；有眨眼和眼屏移动。</small></figcaption></figure>
+<figure><img src="media/screenshots/official-demo-54_5s-blink.png" alt="00:54.5 官方机器人眼睛变化"><figcaption>眼睛形态变化 · 00:54.5<small>同一段原视频的另一帧。</small></figcaption></figure>
+<figure><img src="media/screenshots/official-demo-56_5s-reply.png" alt="00:56.5 官方文字回复页面"><figcaption>问题＋回复正文 · 00:56.5<small>隐藏大动画，右上保留小机器人静态图，播音时滚动正文。</small></figcaption></figure>
+</section>
+<h2>三屏顺序与实施优先级</h2>
+<article><table><thead><tr><th>顺序</th><th>页面／工作</th><th>边界</th></tr></thead><tbody>
+<tr><td>第 1 屏</td><td>机器人动画与对白</td><td>按待机→聆听→处理→回复切换，继续接 EZ</td></tr>
+<tr><td>第 2 屏</td><td>传感器</td><td>保留位置，采集等待 SENSOR 启动</td></tr>
+<tr><td>最后一屏</td><td>Media Player</td><td>音量入口优先；以后新功能插在它之前</td></tr>
+</tbody></table><p>近期：触摸＋音量 → 动画/状态与按键 → 双向对白。后续储备：红外、温湿度/雷达、SD、电池/低功耗、GPIO/PMOD 与设备控制、离线命令、Matter/Home Assistant/RainMaker、USB 音频、自有升级/恢复。</p></article>
+<h2>原厂媒体页功能参考</h2>
+<figure style="max-width:380px"><img src="previews/factory/5.1.png" alt="官方媒体播放器及音量控制"><figcaption>Media Player<small>来自另一套 factory_demo：播放／暂停、切歌、音量加减与音量条。</small></figcaption></figure>
+<footer><a href="README.md">资料索引与源码入口</a> · <a href="manifest.json">逐文件来源和校验</a> · <a href="previews/factory/">原厂界面资料</a> · <a href="previews/emote/">可选 Emote 对比</a><br>本轮只归档和更新计划，未修改或烧录固件。完整计划正文位于项目 docs/ESP_BOX3_EZ_TECHNICAL_PLAN.md。</footer>
+</main></html>

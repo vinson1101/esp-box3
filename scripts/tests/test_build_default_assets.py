@@ -18,6 +18,30 @@ SPEC.loader.exec_module(BUILD)
 
 
 class BuildDefaultAssetsTest(unittest.TestCase):
+    def test_vadnet_selection_is_packed_with_ui_and_missing_model_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            sdk = root / "sdkconfig"
+            sdk.write_text("CONFIG_SR_VADN_VADNET1_MEDIUM=y\n")
+            with self.assertRaises(ValueError):
+                BUILD.get_vadnet_model_paths(sdk, root)
+            model = root / "vadnet_model" / "vadnet1_medium"
+            model.mkdir(parents=True)
+            (model / "vadn1_data").write_bytes(b"vad-model-data")
+            base = root / "base.bin"
+            base.write_bytes(BUILD.pack_assets_entries({
+                "index.json": (b'{"version":1}', 0, 0),
+                "robot.bin": (b"preserved-animation", 320, 240)}))
+            paths = BUILD.get_vadnet_model_paths(sdk, root)
+            output = root / "new.bin"
+            BUILD.configure_assets_models(base, output, [], [], vadnet_model_dirs=paths)
+            files = BUILD.read_assets_entries(output)
+            self.assertEqual(files["robot.bin"], (b"preserved-animation", 320, 240))
+            self.assertIn(b"vadnet1_medium", files["srmodels.bin"][0])
+            self.assertIn(b"vad-model-data", files["srmodels.bin"][0])
+            sdk.write_text("CONFIG_SR_VADN_WEBRTC=y\n")
+            self.assertEqual(BUILD.get_vadnet_model_paths(sdk, root), [])
+
     def test_text_font_metadata_uses_bundle_charset_size_and_bpp(self):
         with tempfile.TemporaryDirectory() as directory:
             assets = Path(directory)

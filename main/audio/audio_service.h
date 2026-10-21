@@ -80,6 +80,9 @@
     }
 
 struct AudioServiceCallbacks {
+#if CONFIG_EZ_DEVICE_GATEWAY
+    std::function<void(const std::vector<int16_t>&)> on_pcm;
+#endif
     std::function<void(void)> on_send_queue_available;
     std::function<void(const std::string&)> on_wake_word_detected;
     std::function<void(bool)> on_vad_change;
@@ -148,6 +151,11 @@ public:
     bool ReadAudioData(std::vector<int16_t>& data, int sample_rate, int samples);
     void ResetDecoder();
     void SetModelsList(srmodel_list_t* models_list);
+#if CONFIG_EZ_DEVICE_GATEWAY
+    uint32_t PlaybackGeneration();
+    // Only the EZ playback worker may call this bounded, waiting enqueue.
+    bool PushPcmToPlaybackQueue(std::vector<int16_t> pcm, uint32_t generation);
+#endif
 
 private:
     AudioCodec* codec_ = nullptr;
@@ -160,6 +168,9 @@ private:
     std::mutex input_resampler_mutex_;
     esp_ae_rate_cvt_handle_t input_resampler_ = nullptr;
     esp_ae_rate_cvt_handle_t output_resampler_ = nullptr;
+#if CONFIG_EZ_DEVICE_GATEWAY
+    esp_ae_rate_cvt_handle_t pcm_output_resampler_ = nullptr;
+#endif
 
     // Encoder/Decoder state
     int encoder_sample_rate_ = 16000;
@@ -199,7 +210,7 @@ private:
     FixedQueue<uint32_t, MAX_TIMESTAMPS_IN_QUEUE> timestamp_queue_;
 
     bool audio_engine_initialized_ = false;
-    bool voice_detected_ = false;
+    std::atomic<bool> voice_detected_{false};
 #if CONFIG_USE_DEVICE_AEC
     bool device_aec_enabled_ = true;
 #else

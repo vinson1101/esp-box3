@@ -1,0 +1,4 @@
+#pragma once
+
+#define DEVICE_PROTOCOL_MAJOR 1U
+#define DEVICE_PROTOCOL_MINOR 0U

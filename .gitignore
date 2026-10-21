@@ -9,7 +9,7 @@ sdkconfig.old
 sdkconfig
 dependencies.lock
 .env
-releases/
+/releases/
 main/assets/lang_config.h
 main/mmap_generate_emoji.h
 .DS_Store
@@ -18,3 +18,21 @@ main/mmap_generate_emoji.h
 *.bin
 mmap_generate_*.h
 .clangd
+
+# Private BOX-3 source/recording references stay in the project, outside Git.
+/local-references/
+# Public source/resource snapshots keep their original paths and binaries.
+!docs/references/esp-box3/**
+
+# Local credentials, captures and diagnostic data must stay private.
+.env.*
+*.log
+*.jsonl
+*.pcm
+*.aiff
+*.pcap
+*.pcapng
+/recordings/
+/captures/
+/logs/
+/private/

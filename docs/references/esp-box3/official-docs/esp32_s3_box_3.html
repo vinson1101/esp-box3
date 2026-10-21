@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP32-S3-BOX-3 -  -  &mdash; 乐鑫板卡管理指南</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=a60756f2" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../../_static/theme_overrides.css?v=851bd809" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=1f19b280"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=ff8fa330"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+
+    
+        
+
+    <script type="text/javascript">
+        DOCUMENTATION_OPTIONS.PAGENAME = 'references/boards/esp32_s3_box_3';
+        DOCUMENTATION_OPTIONS.PROJECT_SLUG = 'esp-board-manager';
+        DOCUMENTATION_OPTIONS.LATEST_BRANCH_NAME = 'main';
+        DOCUMENTATION_OPTIONS.VERSIONS_URL = '../.././_static/docs_version.js';
+        DOCUMENTATION_OPTIONS.LANGUAGES = ["en", "zh_CN"];
+        DOCUMENTATION_OPTIONS.RELEASE = 'latest';
+        DOCUMENTATION_OPTIONS.LANGUAGE_URL = 'zh_CN';
+
+    </script>
+
+    <script type="text/javascript" src="../.././_static/docs_version.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="ESP32-S3-BOX-Lite" href="esp32_s3_box_lite.html" />
+    <link rel="prev" title="ESP32-S3" href="official_esp32_s3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            乐鑫板卡管理指南
+              <img src="../../_static/espressif-logo.svg" class="logo" alt="Logo"/>
+          </a>
+
+          
+
+          <div class="selectors">
+            <select id="version-select" style="width: 150px;" hidden>
+              <option value="" disabled selected>Choose version...</option>
+            </select>
+          </div>
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">快速开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">工具集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../create-board/index.html">创建开发板指南</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">板卡目录</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#espressif-esp-boards">官方开发板（<code class="docutils literal notranslate"><span class="pre">espressif/esp_boards</span></code>）</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="official_esp32.html">ESP32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="official_esp32_c3.html">ESP32-C3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="official_esp32_c5.html">ESP32-C5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="official_esp32_c6.html">ESP32-C6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="official_esp32_h2.html">ESP32-H2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="official_esp32_p4.html">ESP32-P4</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="official_esp32_s3.html">ESP32-S3</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ESP32-S3-BOX-3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_box_lite.html">ESP32-S3-BOX-Lite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_eye.html">ESP32-S3-EYE v2.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_korvo_1.html">ESP32-S3-Korvo-1 v5.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_korvo_2_3.html">ESP32-S3-Korvo-2 V3.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_lcd_ev_board.html">ESP32-S3-LCD-EV-Board v1.5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp_vocat_1_0.html">ESP-VoCat v1.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp_vocat_1_2.html">ESP-VoCat v1.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_devkitc_1.html">ESP32-S3-DevKitC-1 v1.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_devkitm_1.html">ESP32-S3-DevKitM-1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp32_s3_usb_otg.html">ESP32-S3-USB-OTG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp_dualkey.html">ESP-DualKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp_thread_border_router.html">ESP Thread Border Router</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="official_esp32_s31.html">ESP32-S31</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#espressif-esp-friends-boards">社区与合作伙伴开发板（<code class="docutils literal notranslate"><span class="pre">espressif/esp_friends_boards</span></code>）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#m5stack-espressif-m5stack-boards">M5Stack 开发板（<code class="docutils literal notranslate"><span class="pre">espressif/m5stack_boards</span></code>）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">参考手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming-guide/index.html">BMGR 设计原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migration/index.html">迁移指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">乐鑫板卡管理指南</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">板卡目录</a></li>
+          <li class="breadcrumb-item"><a href="official_esp32_s3.html">ESP32-S3</a></li>
+      <li class="breadcrumb-item active">ESP32-S3-BOX-3</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/espressif/esp-board-manager/blob/b5ce878/docs/zh_CN/references/boards/esp32_s3_box_3.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="esp32-s3-box-3">
+<h1>ESP32-S3-BOX-3<a class="headerlink" href="#esp32-s3-box-3" title="此标题的永久链接"></a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="./hardware_overview_for_box_3.md">English Version</a></p></li>
+</ul>
+<section id="id1">
+<h2>硬件概览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<section id="id2">
+<h3>ESP32-S3-BOX-3<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id16">
+<img alt="esp32_s3_box_3.png" src="../../_images/esp32_s3_box_3.png" />
+<figcaption>
+<p><span class="caption-text">esp32_s3_box_3</span><a class="headerlink" href="#id16" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<p>ESP32-S3-BOX-3 主控单元由 ESP32-S3-WROOM-1 模组驱动，该模块提供了 2.4 GHz Wi-Fi + Bluetooth 5 (LE) 的无线功能，同时具备 AI 加速能力。在 ESP32-S3 SoC 提供的 512 KB SRAM 基础上，该模块还附带额外的 16 MB 四线 Flash 和 16 MB 八线 PSRAM。开发板配备一片 2.4 英寸 320 x 240 的 SPI 接口触摸屏（‘红圈’支持触摸），两个数字麦克风，一个扬声器，三轴陀螺仪，三轴加速度计，一个用于电源和下载/调试的 Type-C 接口，一个可实现硬件扩展的高密度 PCIe 连接器，以及三个功能按钮。</p>
+</section>
+<section id="id3">
+<h3>正视图<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id17">
+<img alt="esp_box_3_overview.png" src="../../_images/esp_box_3_overview.png" />
+<figcaption>
+<p><span class="caption-text">esp_box_3_overview</span><a class="headerlink" href="#id17" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id4">
+<h3>规格参数<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id18">
+<img alt="specs" src="../../_images/specs_for_box_3.png" />
+<figcaption>
+<p><span class="caption-text">specs</span><a class="headerlink" href="#id18" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="esp32-s3-box-3-dock">
+<h3>ESP32-S3-BOX-3-DOCK<a class="headerlink" href="#esp32-s3-box-3-dock" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id19">
+<img alt="DOCK.jpg" src="../../_images/DOCK.jpg" />
+<figcaption>
+<p><span class="caption-text">DOCK</span><a class="headerlink" href="#id19" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<p>ESP32-S3-BOX-3-DOCK 被设计成通过插拔金手指为 ESP32-S3-BOX-3 提供支架，并拥有多样化的扩展性。它有两个 Pmod™ 兼容的 I/O 接口，允许用户扩展额外的外设模块。这些接口共提供了 16 个可编程的 GPIO 引脚，同时可以向外设供 3.3 V 电。一个 USB Type-A 接口用于连接各种 USB 设备，如 USB 摄像头（最大分辨率为 720 P）、U 盘和其他 HID 设备。另一个 USB Type-C 接口仅用于 5 V 输入电源。</p>
+</section>
+<section id="id5">
+<h3>正视图<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id20">
+<img alt="esp_box_3_dock_overview.png" src="../../_images/esp_box_3_dock_overview.png" />
+<figcaption>
+<p><span class="caption-text">esp_box_3_dock_overview</span><a class="headerlink" href="#id20" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id6">
+<h3>规格参数<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id21">
+<img alt="specs" src="../../_images/sepc_for_box_3_dock.png" />
+<figcaption>
+<p><span class="caption-text">specs</span><a class="headerlink" href="#id21" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><a class="reference external" href="https://digilent.com/reference/_media/reference/pmod/pmod-interface-specification-1_3_1.pdf">Digilent Pmod™ Interface Specification</a></p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>引脚图<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id22">
+<img alt="pinlayout_box_3_dock.png" src="../../_images/pinlayout_box_3_dock.png" />
+<figcaption>
+<p><span class="caption-text">pinlayout_box_3_dock</span><a class="headerlink" href="#id22" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="esp32-s3-box-3-sensor">
+<h3>ESP32-S3-BOX-3-SENSOR<a class="headerlink" href="#esp32-s3-box-3-sensor" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id23">
+<img alt="SENSOR.jpg" src="../../_images/SENSOR.jpg" />
+<figcaption>
+<p><span class="caption-text">SENSOR</span><a class="headerlink" href="#id23" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<p>ESP32-S3-BOX-3-SENSOR 是一个多功能配件，集成了温湿度传感器、红外发射器和接收器、雷达传感器、18650 可充电电池插槽和 MicroSD 卡插槽。它使用户能够轻松地创建各种创新项目。通过整合多个传感器进行检测和控制，利用可充电电池实现便携性，并使用 MicroSD 卡插槽扩展存储能力（最多可扩展到 32 GB）。</p>
+</section>
+<section id="id8">
+<h3>正视图<a class="headerlink" href="#id8" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id24">
+<img alt="esp_box_3_sensor_overview.png" src="../../_images/esp_box_3_sensor_overview.png" />
+<figcaption>
+<p><span class="caption-text">esp_box_3_sensor_overview</span><a class="headerlink" href="#id24" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id9">
+<h3>规格参数<a class="headerlink" href="#id9" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id25">
+<img alt="specs" src="../../_images/sepc_for_box_3_sensor.png" />
+<figcaption>
+<p><span class="caption-text">specs</span><a class="headerlink" href="#id25" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<p>&gt;**注意**
+&gt;* 当给 18650 电池充电时，请将开关拨至“ON”位置，并将 ESP32-S3-BOX-3 插入 ESP32-S3-BOX-3-SENSOR。</p>
+</section>
+<section id="esp32-s3-box-3-bracket">
+<h3>ESP32-S3-BOX-3-BRACKET<a class="headerlink" href="#esp32-s3-box-3-bracket" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id26">
+<img alt="BRACKET.jpg" src="../../_images/BRACKET.jpg" />
+<figcaption>
+<p><span class="caption-text">BRACKET</span><a class="headerlink" href="#id26" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<p>ESP32-S3-BOX-3-BRACKET 可用于帮助 ESP32-S3-BOX-3 安装到其他设备上，为将非智能设备转变为智能设备开启了多种可能性。ESP32-S3-BOX-3-BRACKET 的安装非常简单，只需使用`模板 &lt;../../../hardware/ESP32-S3-BOX-3-BRACKET_template.PDF&gt;`__准备 2 个孔和一个槽即可。通过利用其两个 Pmod™ 兼容的引脚，用户可以有效地为非智能设备集成无线连接、语音控制和屏幕控制功能。ESP32-S3-BOX-3-BRACKET 转接配件使您能够充分发挥非智能设备的潜力。</p>
+</section>
+<section id="id10">
+<h3>正视图<a class="headerlink" href="#id10" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id27">
+<img alt="esp_box_3_bracket_overview.png" src="../../_images/esp_box_3_bracket_overview.png" />
+<figcaption>
+<p><span class="caption-text">esp_box_3_bracket_overview</span><a class="headerlink" href="#id27" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id11">
+<h3>规格参数<a class="headerlink" href="#id11" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id28">
+<img alt="specs" src="../../_images/sepc_for_box_3_bracket.png" />
+<figcaption>
+<p><span class="caption-text">specs</span><a class="headerlink" href="#id28" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="esp32-s3-box-3-bread">
+<h3>ESP32-S3-BOX-3-BREAD<a class="headerlink" href="#esp32-s3-box-3-bread" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id29">
+<img alt="BREAD.jpg" src="../../_images/BREAD.jpg" />
+<figcaption>
+<p><span class="caption-text">BREAD</span><a class="headerlink" href="#id29" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<p>ESP32-S3-BOX-3-BREAD 是一个转接板，方便用户轻松连接 ESP32-S3-BOX-3 到标准面包板，为热爱自己动手的创客们扩展和连接其他设备提供了便利。它利用高密度 PCIe 连接器和两排 2.54 mm 间距的排针，引出了 ESP32-S3 共 16 个可编程 GPIO 引脚，ESP32-S3-BOX-3-BREAD 极具实用价值。</p>
+</section>
+<section id="id12">
+<h3>正视图<a class="headerlink" href="#id12" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id30">
+<img alt="esp_box_3_bread_overview.png" src="../../_images/esp_box_3_bread_overview.png" />
+<figcaption>
+<p><span class="caption-text">esp_box_3_bread_overview</span><a class="headerlink" href="#id30" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id13">
+<h3>规格参数<a class="headerlink" href="#id13" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id31">
+<img alt="specs" src="../../_images/sepc_for_box_3_bread.png" />
+<figcaption>
+<p><span class="caption-text">specs</span><a class="headerlink" href="#id31" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id14">
+<h3>引脚图<a class="headerlink" href="#id14" title="此标题的永久链接"></a></h3>
+<figure class="align-default" id="id32">
+<img alt="pinlayout_box_3_bread.png" src="../../_images/pinlayout_box_3_bread.png" />
+<figcaption>
+<p><span class="caption-text">pinlayout_box_3_bread</span><a class="headerlink" href="#id32" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id15">
+<h2>硬件开源资料<a class="headerlink" href="#id15" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="../../../hardware/PCB_ESP32-S3-BOX-3_V1.0">ESP32-S3-BOX-3 Kit PCB</a></p></li>
+<li><p><a class="reference external" href="../../../hardware/SCH_ESP32-S3-BOX-3_V1.0">ESP32-S3-BOX-3 Kit Schematic</a></p></li>
+<li><p><a class="reference external" href="../../../hardware/esp32_s3_box_3_shell">ESP32-S3-BOX-3 3D Shell CAD</a></p></li>
+<li><p><a class="reference external" href="../../../hardware/ESP32-S3-BOX-3-BRACKET_template.PDF">ESP32-S3-BOX-3 Bracket Mounting Template</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+             <div class="articleComments">
+
+<style>
+    .expand-feedback-content  {
+        display: none;
+    }
+    .click-like-or-dislike {
+        background-color: #d3d3d3;
+        pointer-events: none;
+    }
+</style>
+
+<script>
+    function submitFeedbackForm(user_likes_document) {
+        // Send to GA4 the user reaction
+        gtag('event', 'user_reaction', {
+            'user_likes_document': user_likes_document
+        });
+
+        if (user_likes_document === 1) {
+            document.querySelector('.like-btn').classList.add('click-like-or-dislike');
+            document.getElementById("expandContentLike").style.display = 'block';
+        } else {
+            document.querySelector('.dislike-btn').classList.add('click-like-or-dislike');
+            document.getElementById("expandContent").style.display = 'block';
+        }
+
+        document.querySelector('.like-btn').style.pointerEvents = 'none';
+        document.querySelector('.dislike-btn').style.pointerEvents = 'none';
+    }
+</script>
+
+<hr>
+
+<p style="text-align:center"><strong>此文档对您有帮助吗？</strong></p>
+<p style="text-align:center">
+    <button class="like-btn" onclick="submitFeedbackForm(1)">
+        <svg aria-hidden="true" focusable="false" class="color-fg-muted" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
+            <path d="M8.834.066c.763.087 1.5.295 2.01.884.505.581.656 1.378.656 2.3 0 .467-.087 1.119-.157 1.637L11.328 5h1.422c.603 0 1.174.085 1.668.333.508.254.911.679 1.137 1.2.453.998.438 2.447.188 4.316l-.04.306c-.105.79-.195 1.473-.313 2.033-.131.63-.315 1.209-.668 1.672C13.97 15.847 12.706 16 11 16c-1.848 0-3.234-.333-4.388-.653-.165-.045-.323-.09-.475-.133-.658-.186-1.2-.34-1.725-.415A1.75 1.75 0 0 1 2.75 16h-1A1.75 1.75 0 0 1 0 14.25v-7.5C0 5.784.784 5 1.75 5h1a1.75 1.75 0 0 1 1.514.872c.258-.105.59-.268.918-.508C5.853 4.874 6.5 4.079 6.5 2.75v-.5c0-1.202.994-2.337 2.334-2.184ZM4.5 13.3c.705.088 1.39.284 2.072.478l.441.125c1.096.305 2.334.598 3.987.598 1.794 0 2.28-.223 2.528-.549.147-.193.276-.505.394-1.07.105-.502.188-1.124.295-1.93l.04-.3c.25-1.882.189-2.933-.068-3.497a.921.921 0 0 0-.442-.48c-.208-.104-.52-.174-.997-.174H11c-.686 0-1.295-.577-1.206-1.336.023-.192.05-.39.076-.586.065-.488.13-.97.13-1.328 0-.809-.144-1.15-.288-1.316-.137-.158-.402-.304-1.048-.378C8.357 1.521 8 1.793 8 2.25v.5c0 1.922-.978 3.128-1.933 3.825a5.831 5.831 0 0 1-1.567.81ZM2.75 6.5h-1a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+        </svg>
+    </button>
+    <button class="dislike-btn" onclick="submitFeedbackForm(0)">
+        <svg aria-hidden="true" focusable="false" class="" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible">
+            <path d="M7.083 15.986c-.763-.087-1.499-.295-2.011-.884-.504-.581-.655-1.378-.655-2.299 0-.468.087-1.12.157-1.638l.015-.112H3.167c-.603 0-1.174-.086-1.669-.334a2.415 2.415 0 0 1-1.136-1.2c-.454-.998-.438-2.447-.188-4.316l.04-.306C.32 4.108.41 3.424.526 2.864c.132-.63.316-1.209.669-1.672C1.947.205 3.211.053 4.917.053c1.848 0 3.234.332 4.388.652l.474.133c.658.187 1.201.341 1.726.415a1.75 1.75 0 0 1 1.662-1.2h1c.966 0 1.75.784 1.75 1.75v7.5a1.75 1.75 0 0 1-1.75 1.75h-1a1.75 1.75 0 0 1-1.514-.872c-.259.105-.59.268-.919.508-.671.491-1.317 1.285-1.317 2.614v.5c0 1.201-.994 2.336-2.334 2.183Zm4.334-13.232c-.706-.089-1.39-.284-2.072-.479l-.441-.125c-1.096-.304-2.335-.597-3.987-.597-1.794 0-2.28.222-2.529.548-.147.193-.275.505-.393 1.07-.105.502-.188 1.124-.295 1.93l-.04.3c-.25 1.882-.19 2.933.067 3.497a.923.923 0 0 0 .443.48c.208.104.52.175.997.175h1.75c.685 0 1.295.577 1.205 1.335-.022.192-.049.39-.075.586-.066.488-.13.97-.13 1.329 0 .808.144 1.15.288 1.316.137.157.401.303 1.048.377.307.035.664-.237.664-.693v-.5c0-1.922.978-3.127 1.932-3.825a5.878 5.878 0 0 1 1.568-.809Zm1.75 6.798h1a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25Z"></path>
+        </svg>
+    </button>
+</p>
+
+<div class="expand-feedback-content " id="expandContentLike">
+    <ul style="text-align:center">
+        <li>反馈已收到，谢谢！</li>
+        <li>如果您有其他意见，欢迎填写<a href="https://www.espressif.com/zh-hans/company/documents/documentation_feedback?docId=10773&sections=ESP32-S3-BOX-3 (references/boards/esp32_s3_box_3)&version=latest (master)">乐鑫文档反馈表</a>。</li>
+    </ul>
+</div>
+
+<div class="expand-feedback-content " id="expandContent">
+    <ul style="text-align:center">
+        <li>我们重视您的反馈。</li>
+        <li>您可以填写<a href="https://www.espressif.com/zh-hans/company/documents/documentation_feedback?docId=10773&sections=ESP32-S3-BOX-3 (references/boards/esp32_s3_box_3)&version=latest (master)">乐鑫文档反馈表</a>告诉我们如何改进该文档。</li>
+    </ul>
+</div>
+
+<br>
+
+
+             </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="official_esp32_s3.html" class="btn btn-neutral float-left" title="ESP32-S3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="esp32_s3_box_lite.html" class="btn btn-neutral float-right" title="ESP32-S3-BOX-Lite" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2017 - 2026, 乐鑫信息科技（上海）股份有限公司。</p>
+  </div>
+
+  <ul class="footer">
+        <li>
+	    
+            
+            利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用的  <a href="https://github.com/espressif/sphinx_idf_theme">主题</a>  based on <a href="https://github.com/readthedocs/sphinx_rtd_theme">Read the Docs Sphinx Theme</a>.
+         </li>
+    <li class="footer-aside">
+        <a href="../../esp-board-manager-zh_CN-master.pdf" class="fa fa-file-pdf-o"> Download PDF</a>
+    </li>
+
+  </ul> 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

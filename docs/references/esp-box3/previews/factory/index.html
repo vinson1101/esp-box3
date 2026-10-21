@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOX-3 原厂界面 · 官方原图与实机视频</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f4f7;color:#18212f;font:16px/1.65 -apple-system,BlinkMacSystemFont,sans-serif}main{max-width:1100px;padding:28px 22px;margin:auto}h1{font-size:27px;margin:0 0 8px}p{margin:0 0 16px;color:#526174}h2{font-size:19px;margin:0 0 10px}video{width:100%;display:block;border-radius:10px;background:#111}article{background:white;border:1px solid #dbe1e9;border-radius:12px;padding:18px;margin:18px 0}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:16px}figure{margin:0;padding:14px;background:#fff;border:1px solid #dbe1e9;border-radius:12px}figure img{width:100%;height:220px;object-fit:contain;display:block}figcaption{margin-top:12px}small{display:block;color:#657286;font-size:13px}a{color:#1468c4}button{padding:8px 15px;border:1px solid #acbdd0;border-radius:8px;background:white;color:#194a7e;margin-bottom:12px;cursor:pointer}footer{font-size:13px;margin:20px 0;color:#657286}
+</style>
+<main>
+<h1>BOX-3 原厂出厂界面</h1>
+<p>官方文档原图 ＋ 乐鑫官方演示视频。原厂语音界面以麦克风和两侧跳动柱条为主，区别于 Emote 双眼表情。</p>
+<article>
+<h2>官方动态演示</h2>
+<p>视频来自“乐鑫信息科技”官方账号、由 esp-box 官方 README 链接。约 00:35 起可看到语音交互界面；整段宣传片还包含其他示例，不能把所有画面都当作出厂固件。</p>
+<button type="button" onclick="document.getElementById('demo').currentTime=35;document.getElementById('demo').play()">从语音演示处播放</button>
+<video id="demo" controls autoplay muted playsinline preload="auto" src="official-box3-demo.mp4#t=35,40"></video>
+<small>原视频保持完整、未剪辑；本页默认静音，可自行开启声音。</small>
+</article>
+<section>
+<figure><img src="16.png" alt="官方原厂语音识别界面，麦克风与两侧音柱"><figcaption>语音唤醒／识别界面<small>两侧柱条是动态部分；此处原图为静态截图，动态请看上方实机视频。</small></figcaption></figure>
+<figure><img src="boot_animation.png" alt="官方开机动画示意：旋转圆弧、Espressif 标志和文字"><figcaption>Logo 开机动画示意<small>原厂动画包含圆弧旋转、Logo 与文字移动／淡入。这是官方文档的静态示意图，不是动图。</small></figcaption></figure>
+<figure><img src="5.1.png" alt="原厂 Media Player 页面及音量加减"><figcaption>原厂 Media Player<small>播放／暂停、上一首／下一首、底部系统音量加减和音量条。</small></figcaption></figure>
+<figure><img src="4.png" alt="原厂横向滑动卡片菜单"><figcaption>原厂滑动卡片菜单<small>左右切换功能，底部分页指示；这也是多屏机制的参考。</small></figcaption></figure>
+<figure><img src="23.png" alt="原厂 Sensor Monitor 页面"><figcaption>原厂传感器页面<small>供后续 SENSOR 第二屏适配参考。</small></figcaption></figure>
+</section>
+<footer>
+<a href="https://www.bilibili.com/video/BV11N4y197Qu/">官方视频原页面</a> ·
+<a href="https://github.com/espressif/esp-box/blob/aae1b7a6d193d968cf53e42f291a60c4ca1c622c/docs/getting_started_cn.md">官方中文入门文档</a> ·
+<a href="../emote/">对比 Emote 双眼动画</a><br>
+原图及源码固定提交 aae1b7a6d193d968cf53e42f291a60c4ca1c622c。当前只做电脑预览，没有刷回原厂或修改设备固件。
+</footer>
+</main>
+</html>

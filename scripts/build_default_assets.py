@@ -213,9 +213,9 @@ def copy_wakenet_model(src, dst, idf_target=None):
 
 
 def process_sr_models(wakenet_model_dirs, multinet_model_dirs, build_dir, assets_dir,
-                      idf_target=None):
-    """Process SR models (wakenet and multinet) and generate srmodels.bin"""
-    if not wakenet_model_dirs and not multinet_model_dirs:
+                      idf_target=None, vadnet_model_dirs=None):
+    """Pack selected WakeNet, MultiNet and VADNet models into srmodels.bin."""
+    if not wakenet_model_dirs and not multinet_model_dirs and not vadnet_model_dirs:
         return None
     
     # Create SR models build directory
@@ -235,9 +235,10 @@ def process_sr_models(wakenet_model_dirs, multinet_model_dirs, build_dir, assets
                 models_processed += 1
                 print(f"Added wakenet model: {wakenet_name}")
     
-    # Copy multinet models if available
-    if multinet_model_dirs:
-        for multinet_model_dir in multinet_model_dirs:
+    # MultiNet and VADNet both use complete model directories.
+    auxiliary_models = list(multinet_model_dirs or []) + list(vadnet_model_dirs or [])
+    if auxiliary_models:
+        for multinet_model_dir in auxiliary_models:
             multinet_name = os.path.basename(multinet_model_dir)
             multinet_dst = os.path.join(sr_models_build_dir, multinet_name)
             if copy_directory(multinet_model_dir, multinet_dst):
@@ -456,7 +457,7 @@ def pack_assets_entries(files, name_length=32):
 
 def configure_assets_models(base_assets, output, wakenet_models, multinet_models,
                             idf_target=None, multinet_model_info=None,
-                            name_length=32, max_size=None):
+                            name_length=32, max_size=None, vadnet_model_dirs=None):
     """Replace prebuilt speech models while preserving custom/Emote UI data."""
     files = read_assets_entries(base_assets, name_length)
     if "index.json" not in files:
@@ -475,9 +476,10 @@ def configure_assets_models(base_assets, output, wakenet_models, multinet_models
     destination = Path(output)
     destination.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="configured-models-", dir=destination.parent) as directory:
-        if wakenet_models or multinet_models:
+        if wakenet_models or multinet_models or vadnet_model_dirs:
             model_file = process_sr_models(wakenet_models, multinet_models, directory,
-                                           directory, idf_target=idf_target)
+                                           directory, idf_target=idf_target,
+                                           vadnet_model_dirs=vadnet_model_dirs)
             if not model_file:
                 raise ValueError("Failed to pack the selected speech models")
             files[model_file] = ((Path(directory) / model_file).read_bytes(), 0, 0)
@@ -620,6 +622,17 @@ def read_wakenet_from_sdkconfig(sdkconfig_path):
                 models.append(model_name)
 
     return models
+
+
+def get_vadnet_model_paths(sdkconfig_path, esp_sr_model_path):
+    """Package a selected VADNet; never silently fall back to WebRTC."""
+    config = Path(sdkconfig_path).read_text(encoding="utf-8")
+    if not re.search(r"^CONFIG_SR_VADN_VADNET1_MEDIUM=y$", config, re.MULTILINE):
+        return []
+    model = Path(esp_sr_model_path) / "vadnet_model" / "vadnet1_medium"
+    if not model.is_dir():
+        raise ValueError(f"Selected VADNet model is missing: {model}")
+    return [str(model)]
 
 
 def read_multinet_from_sdkconfig(sdkconfig_path):
@@ -888,7 +901,7 @@ def get_emoji_collection_path(default_emoji_collection, noto_fonts_path, project
 def build_assets_integrated(wakenet_model_paths, multinet_model_paths, text_font_path,
                             emoji_collection_path, extra_files_path, output_path,
                             multinet_model_info=None, font_bundle_id=None, max_size=None,
-                            idf_target=None):
+                            idf_target=None, vadnet_model_dirs=None):
     """
     Build assets using integrated functions (no external dependencies)
     """
@@ -908,8 +921,8 @@ def build_assets_integrated(wakenet_model_paths, multinet_model_paths, text_font
         # Process each component
         srmodels = process_sr_models(
             wakenet_model_paths, multinet_model_paths, temp_build_dir, assets_dir,
-            idf_target=idf_target,
-        ) if (wakenet_model_paths or multinet_model_paths) else None
+            idf_target=idf_target, vadnet_model_dirs=vadnet_model_dirs,
+        ) if (wakenet_model_paths or multinet_model_paths or vadnet_model_dirs) else None
         text_font = process_text_font(text_font_path, assets_dir) if text_font_path else None
         emoji_collection = process_emoji_collection(emoji_collection_path, assets_dir) if emoji_collection_path else None
         extra_files = process_extra_files(extra_files_path, assets_dir) if extra_files_path else None
@@ -1004,6 +1017,7 @@ def main():
     # Read SR models from sdkconfig
     wakenet_model_names = read_wakenet_from_sdkconfig(args.sdkconfig)
     multinet_model_names = read_multinet_from_sdkconfig(args.sdkconfig)
+    vadnet_model_paths = get_vadnet_model_paths(args.sdkconfig, args.esp_sr_model_path)
     
     # Apply wake word logic to decide which models to package
     wakenet_model_paths = []
@@ -1085,6 +1099,7 @@ def main():
                 args.base_assets, args.output, wakenet_model_paths, multinet_model_paths,
                 idf_target=idf_target, multinet_model_info=multinet_model_info,
                 name_length=args.name_length, max_size=args.max_size,
+                vadnet_model_dirs=vadnet_model_paths,
             )
         except (ValueError, OSError) as error:
             parser.error(str(error))
@@ -1092,7 +1107,7 @@ def main():
         return
     
     # Check if we have anything to build
-    if not wakenet_model_paths and not multinet_model_paths and not text_font_path and not emoji_collection_path and not extra_files_path and not multinet_model_info:
+    if not wakenet_model_paths and not multinet_model_paths and not vadnet_model_paths and not text_font_path and not emoji_collection_path and not extra_files_path and not multinet_model_info:
         print("Warning: No assets to build (no SR models, text font, emoji collection, extra files, or custom wake word)")
         # Create an empty assets.bin file
         os.makedirs(os.path.dirname(args.output), exist_ok=True)
@@ -1105,7 +1120,7 @@ def main():
     success = build_assets_integrated(
         wakenet_model_paths, multinet_model_paths, text_font_path, emoji_collection_path,
         extra_files_path, args.output, multinet_model_info, font_bundle_id, args.max_size,
-        idf_target=idf_target)
+        idf_target=idf_target, vadnet_model_dirs=vadnet_model_paths)
     
     if not success:
         sys.exit(1)
